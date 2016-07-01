@@ -1,0 +1,11 @@
+{
+  "name": "mark-wens-space-v3-web",
+  "version": "3.0.0",
+  "description": "Web client of my personal website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thousight",
+  "license": "ISC"
+}
