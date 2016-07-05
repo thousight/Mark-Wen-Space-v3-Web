@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google info meta -->
+    <meta name="description"
+      content="Mark Wen's personal resume website">
+    <meta name="author" content="Mark Wen">
+    <!-- only Baidu uses these keywords -->
+    <meta name="keywords" content="web,design,html,css,html5,development,server,resume,purdue">
+    <!-- Facebook Link meta -->
+    <meta property="og:title" content="Mark Wen Space">
+    <!-- TODO: <meta property="og:image" content="link_to_image"> -->
+    <meta property="og:description" content="Mark Wen's personal resume website">
+    <title>Mark Wen Space</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JS -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <home-title />
+  </body>
+</html>
