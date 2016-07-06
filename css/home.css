@@ -1,0 +1,125 @@
+/** *********************** Mark Wen Space v.3 Web CSS ********************* **/
+/** ************************************************************************ **/
+
+/** ********************************* Home ********************************* **/
+.Home {
+  /*Background Image*/
+  background: url('../img/home.jpg') center center no-repeat scroll;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+
+  /*Vertically center all items*/
+  display: flex;
+  vertical-align: middle;
+  flex-direction: column;
+  justify-content: center;
+}
+/*title*/
+.home-title {
+  /*Horizontally center*/
+  text-align: center;
+  /*Font*/
+  font-family: sans-serif;
+  color: white;
+  font-size: 65px;
+  font-weight: 300;
+}
+/*Subtitle*/
+.home-subtitle {
+  /*Horizontally center*/
+  text-align: center;
+  /*Font*/
+  font-family: sans-serif;
+  color: white;
+  font-size: 23px;
+  /*Vertically Closer*/
+   margin-top: -25px;
+   margin-bottom: -1px;
+}
+/*Icons*/
+.home-icons-wrapper {
+  /*Horizontally center all items*/
+  margin: 0 auto;
+  display: table;
+  position: relative;
+}
+.home-icons-ul {
+  /*Horizontally center all items*/
+  list-style: none;
+}
+.home-icons-li {
+  /*Horizontal Listing*/
+  display: inline;
+  /*Distance between Icons*/
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.home-icons-icon {
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.93);  /*White with 0.93 transparency*/
+}
+
+/*Responsive Detail Settings*/
+/*xl: */
+@media screen and (min-width: 1441px) {
+  .home-icons-wrapper {
+    /*Vertically Taller*/
+    margin-bottom: 20%;
+    margin-top: 5px;
+  }
+  .home-title {
+    font-size: 100px;
+  }
+  .home-subtitle {
+    font-size: 40px;
+  }
+  .home-icons-icon {
+    font-size: 40px;
+  }
+}
+/*lg: */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .home-icons-wrapper {
+    /*Vertically Taller*/
+    margin-bottom: 425px;
+    margin-top: 5px;
+  }
+}
+/*md: */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .home-icons-wrapper {
+    /*Vertically Taller*/
+    margin-bottom: 400px;
+    margin-top: 5px;
+  }
+}
+/*sm: */
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .home-icons-wrapper {
+    /*Vertically Taller*/
+    margin-bottom: 75%;
+    margin-top: 5px;
+  }
+  .home-title {
+    font-size: 50px;
+  }
+  .home-subtitle {
+    font-size: 20px;
+  }
+}
+/*xm: */
+@media screen and (max-width: 425px) {
+  .home-icons-wrapper {
+    /*Vertically Taller*/
+    margin-bottom: 75%;
+    margin-top: 5px;
+  }
+  .home-title {
+    font-size: 50px;
+  }
+  .home-subtitle {
+    font-size: 20px;
+  }
+}

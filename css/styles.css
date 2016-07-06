@@ -1,0 +1,23 @@
+/** *********************** Mark Wen Space v.3 Web CSS ********************* **/
+/** ************************************************************************ **/
+
+
+/** **************************** Global Setting **************************** **/
+/*Full Screen Responsive Div*/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.content {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+/*Not Allowed to Select the Text*/
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+}
