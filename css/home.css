@@ -23,7 +23,7 @@
   /*Font*/
   font-family: sans-serif;
   color: white;
-  font-size: 65px;
+  font-size: 50px;
   font-weight: 300;
 }
 /*Subtitle*/
@@ -33,7 +33,7 @@
   /*Font*/
   font-family: sans-serif;
   color: white;
-  font-size: 23px;
+  font-size: 16px;
   /*Vertically Closer*/
    margin-top: -25px;
    margin-bottom: -1px;
@@ -70,10 +70,10 @@
     margin-top: 5px;
   }
   .home-title {
-    font-size: 100px;
+    font-size: 80px;
   }
   .home-subtitle {
-    font-size: 40px;
+    font-size: 20px;
   }
   .home-icons-icon {
     font-size: 40px;
@@ -102,12 +102,6 @@
     margin-bottom: 75%;
     margin-top: 5px;
   }
-  .home-title {
-    font-size: 50px;
-  }
-  .home-subtitle {
-    font-size: 20px;
-  }
 }
 /*xm: */
 @media screen and (max-width: 425px) {
@@ -115,11 +109,5 @@
     /*Vertically Taller*/
     margin-bottom: 75%;
     margin-top: 5px;
-  }
-  .home-title {
-    font-size: 50px;
-  }
-  .home-subtitle {
-    font-size: 20px;
   }
 }
