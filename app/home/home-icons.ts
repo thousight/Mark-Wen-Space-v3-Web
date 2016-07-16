@@ -1,10 +1,10 @@
-import { Component } from '@angular/core'
-import { Http, Response } from '@angular/http'
-import { Observable } from 'rxjs/Rx'
-import 'rxjs/add/operator/map'
+import { Component } from "@angular/core";
+import { Http, Response } from "@angular/http";
+import { Observable } from "rxjs/Rx";
+import "rxjs/add/operator/map";
 
 @Component({
-  selector: 'home-icons',
+  selector: "home-icons",
   template: `
             <div class="home-icons-wrapper">
               <ul class="home-icons-ul no-select">
@@ -19,22 +19,22 @@ import 'rxjs/add/operator/map'
             `
 })
 
-export class HomeIcons{
+export class HomeIcons {
   public links;
-  private linksUrl = 'http://mark-wen-space-v3-server.herokuapp.com/links';
+  private linksUrl = "http://mark-wen-space-v3-server.herokuapp.com/links";
 
   constructor(private http: Http) { }
 
   ngOnInit() {
-    this.getLinks()
+    this.getLinks();
   }
 
   getLinks() {
     return this.http.get(this.linksUrl)
-             .map((res:Response) => res.json())
+             .map((res: Response) => res.json())
              .subscribe(
-               data => { this.links = data },
+               data => { this.links = data; },
                err => console.error(err)
-             )
+             );
   }
 }

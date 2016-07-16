@@ -8,13 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/map');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
 var HomeIcons = (function () {
     function HomeIcons(http) {
         this.http = http;
-        this.linksUrl = 'http://mark-wen-space-v3-server.herokuapp.com/links';
+        this.linksUrl = "http://mark-wen-space-v3-server.herokuapp.com/links";
     }
     HomeIcons.prototype.ngOnInit = function () {
         this.getLinks();
@@ -27,7 +27,7 @@ var HomeIcons = (function () {
     };
     HomeIcons = __decorate([
         core_1.Component({
-            selector: 'home-icons',
+            selector: "home-icons",
             template: "\n            <div class=\"home-icons-wrapper\">\n              <ul class=\"home-icons-ul no-select\">\n                <li class=\"home-icons-li\"\n                *ngFor=\"let link of links\" >\n                  <a href={{link.url}} target=\"_blank\">\n                    <span class=\"home-icons-icon {{link.icon}}\"></span>\n                  </a>\n                </li>\n              </ul>\n            </div>\n            "
         }), 
         __metadata('design:paramtypes', [http_1.Http])

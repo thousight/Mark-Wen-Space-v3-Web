@@ -1,8 +1,8 @@
-import { Component } from '@angular/core'
-import { HomeIcons } from './home-icons'
+import { Component } from "@angular/core";
+import { HomeIcons } from "./home-icons";
 
 @Component({
-  selector: 'home',
+  selector: "home",
   template: `
             <div class="Home content section scrollspy">
               <h1 class="home-title no-select">Mark Wen</h1>
@@ -13,4 +13,4 @@ import { HomeIcons } from './home-icons'
   directives: [HomeIcons]
 })
 
-export class Home{}
+export class Home {}

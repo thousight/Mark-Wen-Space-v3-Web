@@ -58,6 +58,7 @@
 }
 .home-icons-icon {
   font-size: 32px;
+  color: white;
   color: rgba(255, 255, 255, 0.93);  /*White with 0.93 transparency*/
 }
 
