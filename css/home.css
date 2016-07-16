@@ -102,6 +102,9 @@
     margin-bottom: 75%;
     margin-top: 5px;
   }
+  .home-icons-icon {
+    font-size: 38px;
+  }
 }
 /*xm: */
 @media screen and (max-width: 425px) {
