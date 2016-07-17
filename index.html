@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta -->
     <meta charset="utf-8">
+    <meta http-equiv="content-language" content="en">
+    <!-- iOS devices optimization -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Disables automatic detection of possible phone numbers-->
+    <meta name="format-detection" content="telephone=no">
+    <!--specifies full-screen mode-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--specify full-screen mode first-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- Google info meta -->
     <meta name="description"
       content="Mark Wen's personal resume website">
@@ -11,15 +20,18 @@
     <meta name="keywords" content="web,design,html,css,html5,development,server,resume,purdue">
     <!-- Facebook Link meta -->
     <meta property="og:title" content="Mark Wen Space">
-    <!-- TODO: <meta property="og:image" content="link_to_image"> -->
+    <meta property="og:image" content="./img/ogImage.png">
     <meta property="og:description" content="Mark Wen's personal resume website">
+    <!-- Icon and Title -->
+    <link rel="shortcut icon" href="./img/appIcon.png" type="image/x-icon">
     <title>Mark Wen Space</title>
+
     <!-- CSS -->
     <!-- Materializecss -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="./css/font-awesome-4.6.3/css/font-awesome.min.css">
-    <!-- My Custom CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -44,4 +56,5 @@
   <body>
     <app />
   </body>
+
 </html>
