@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var onLoad_1 = require("./onLoad");
 var home_1 = require("./home/home");
 var App = (function () {
     function App() {
@@ -16,8 +17,8 @@ var App = (function () {
     App = __decorate([
         core_1.Component({
             selector: "app",
-            template: "\n              <home></home>\n            ",
-            directives: [home_1.Home]
+            template: "\n            <!-- List all the main components here -->\n            <home></home>\n\n            <!-- List other components here -->\n            <onLoad></onLoad>\n            ",
+            directives: [onLoad_1.OnLoad, home_1.Home]
         }), 
         __metadata('design:paramtypes', [])
     ], App);

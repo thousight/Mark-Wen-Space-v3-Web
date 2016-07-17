@@ -1,11 +1,12 @@
 /** *********************** Mark Wen Space v.3 Web CSS ********************* **/
 /** ************************************************************************ **/
 
-/** **************************** Global Setting **************************** **/
+/** ************************ Global & OnLoad Setting *********************** **/
 /*Full Screen Responsive Div*/
 html, body {
   height: 100%;
   margin: 0;
+  background-color: #FAFAFA;
 }
 .content {
   height: 100%;
@@ -20,4 +21,18 @@ html, body {
   -moz-user-select: none;      /* Firefox */
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;
+}
+/*Loading Spinner*/
+.OnLoad onLoad{
+  /*Center all items*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*Transition*/
+  opacity: 0;
+  transition: opacity .8s ease-in-out;
+}
+home:empty + .OnLoad {
+  opacity: 1;
+  z-index: 100;
 }

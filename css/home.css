@@ -9,6 +9,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0 ,0 ,0 , 0.08);
   /*Vertically center all items*/
   display: flex;
   vertical-align: middle;
@@ -26,7 +27,7 @@
   text-align: center;
   /*Font*/
   font-family: sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 55px;
   font-weight: 300;
 }
@@ -36,7 +37,7 @@
   text-align: center;
   /*Font*/
   font-family: sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   /*Vertically Closer*/
    margin-top: -28px;
@@ -62,7 +63,7 @@
 }
 .home-icons-icon {
   font-size: 27px;
-  color: white;
+  color: rgb(255, 255, 255);
   color: rgba(255, 255, 255, 0.85);  /*White with 0.93 transparency*/
   /*Hover transition*/
   -webkit-transition: color 0.2s ease-in;   /* Chrome/Safari */
