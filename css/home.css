@@ -63,5 +63,15 @@
 .home-icons-icon {
   font-size: 27px;
   color: white;
-  color: rgba(255, 255, 255, 0.93);  /*White with 0.93 transparency*/
+  color: rgba(255, 255, 255, 0.85);  /*White with 0.93 transparency*/
+  /*Hover transition*/
+  -webkit-transition: color 0.2s ease-in;   /* Chrome/Safari */
+  -khtml-transition: color 0.2s ease-in;    /* Konqueror */
+  -moz-transition: color 0.2s ease-in;      /* Firefox */
+  -ms-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;   /* Opera */
+  transition: color 0.2s ease-in;
+}
+.home-icons-icon:hover {
+  color: rgb(255, 255, 255);
 }
