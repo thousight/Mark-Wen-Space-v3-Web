@@ -9,21 +9,25 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-
   /*Vertically center all items*/
   display: flex;
   vertical-align: middle;
   flex-direction: column;
   justify-content: center;
 }
-/*title*/
+.home-content-wrapper {
+  /*Keep content at the height*/
+  height: 65%;
+  vertical-align: middle;
+}
+/*Title*/
 .home-title {
   /*Horizontally center*/
   text-align: center;
   /*Font*/
   font-family: sans-serif;
   color: white;
-  font-size: 50px;
+  font-size: 55px;
   font-weight: 300;
 }
 /*Subtitle*/
@@ -35,8 +39,8 @@
   color: white;
   font-size: 16px;
   /*Vertically Closer*/
-   margin-top: -25px;
-   margin-bottom: -1px;
+   margin-top: -28px;
+   margin-bottom: -5px;
 }
 /*Icons*/
 .home-icons-wrapper {
@@ -53,65 +57,11 @@
   /*Horizontal Listing*/
   display: inline;
   /*Distance between Icons*/
-  margin-left: 7px;
-  margin-right: 7px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 .home-icons-icon {
-  font-size: 32px;
+  font-size: 27px;
   color: white;
   color: rgba(255, 255, 255, 0.93);  /*White with 0.93 transparency*/
-}
-
-/*Responsive Detail Settings*/
-/*xl: */
-@media screen and (min-width: 1441px) {
-  .home-icons-wrapper {
-    /*Vertically Taller*/
-    margin-bottom: 20%;
-    margin-top: 5px;
-  }
-  .home-title {
-    font-size: 80px;
-  }
-  .home-subtitle {
-    font-size: 20px;
-  }
-  .home-icons-icon {
-    font-size: 40px;
-  }
-}
-/*lg: */
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .home-icons-wrapper {
-    /*Vertically Taller*/
-    margin-bottom: 425px;
-    margin-top: 5px;
-  }
-}
-/*md: */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .home-icons-wrapper {
-    /*Vertically Taller*/
-    margin-bottom: 400px;
-    margin-top: 5px;
-  }
-}
-/*sm: */
-@media screen and (min-width: 426px) and (max-width: 767px) {
-  .home-icons-wrapper {
-    /*Vertically Taller*/
-    margin-bottom: 75%;
-    margin-top: 5px;
-  }
-  .home-icons-icon {
-    font-size: 38px;
-  }
-}
-/*xm: */
-@media screen and (max-width: 425px) {
-  .home-icons-wrapper {
-    /*Vertically Taller*/
-    margin-bottom: 75%;
-    margin-top: 5px;
-  }
 }

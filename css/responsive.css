@@ -1,0 +1,53 @@
+/** *********************** Mark Wen Space v.3 Web CSS ********************* **/
+/** ************************************************************************ **/
+
+/** *********************** Responsive Detail Settings ********************* **/
+/*xxl: 2k or 4k monitors*/
+@media screen and (min-width: 1921px) {
+  .home-title {
+    font-size: 95px;
+  }
+  .home-subtitle {
+    font-size: 27px;
+  }
+  .home-icons-icon {
+    font-size: 48px;
+  }
+  .home-icons-li {
+    /*Distance between Icons*/
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+}
+
+/*xl: 1080p monitors*/
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .home-title {
+    font-size: 75px;
+  }
+  .home-subtitle {
+    font-size: 20px;
+  }
+  .home-icons-icon {
+    font-size: 38px;
+  }
+}
+
+/*lg: normal monitors*/
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+
+}
+
+/*md: small monitors*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/*sm: tablets*/
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+/*xm: smartphone*/
+@media screen and (max-width: 425px) {
+
+}
