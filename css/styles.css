@@ -23,16 +23,12 @@ html, body {
   user-select: none;
 }
 /*Loading Spinner*/
-.OnLoad onLoad{
-  /*Center all items*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /*Transition*/
-  opacity: 0;
-  transition: opacity .8s ease-in-out;
+.OnLoad {
+  position: relative;
 }
-home:empty + .OnLoad {
-  opacity: 1;
-  z-index: 100;
+.OnLoadCentering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

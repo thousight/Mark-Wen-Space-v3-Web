@@ -9,18 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var allDataService_1 = require("./allDataService");
 var onLoad_1 = require("./onLoad");
 var home_1 = require("./home/home");
 var App = (function () {
-    function App() {
+    function App(allDataService) {
+        this.allDataService = allDataService;
     }
     App = __decorate([
         core_1.Component({
             selector: "app",
-            template: "\n            <!-- List all the main components here -->\n            <home></home>\n\n            <!-- List other components here -->\n            <onLoad></onLoad>\n            ",
-            directives: [onLoad_1.OnLoad, home_1.Home]
+            template: "\n            <!-- List all the main components inside div -->\n            <div *ngIf=\"allDataService.getLoading()\">\n              <home></home>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad *ngIf=\"allDataService.getLoading()\"></onLoad>\n            ",
+            directives: [onLoad_1.OnLoad, home_1.Home],
+            providers: [allDataService_1.AllDataService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [allDataService_1.AllDataService])
     ], App);
     return App;
 }());

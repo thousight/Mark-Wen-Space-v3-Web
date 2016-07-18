@@ -1,17 +1,23 @@
 import { Component } from "@angular/core";
+import { AllDataService } from "./allDataService";
 import { OnLoad } from "./onLoad";
 import { Home } from "./home/home";
 
 @Component({
   selector: "app",
   template: `
-            <!-- List all the main components here -->
-            <home></home>
+            <!-- List all the main components inside div -->
+            <div *ngIf="allDataService.getLoading()">
+              <home></home>
+            </div>
 
             <!-- List other components here -->
-            <onLoad></onLoad>
+            <onLoad *ngIf="allDataService.getLoading()"></onLoad>
             `,
-  directives: [OnLoad, Home]
+  directives: [OnLoad, Home],
+  providers: [AllDataService]
 })
 
-export class App {}
+export class App {
+  constructor(private allDataService: AllDataService) { }
+}
