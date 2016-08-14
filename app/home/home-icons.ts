@@ -9,7 +9,7 @@ import "rxjs/add/operator/map";
             <div class="home-icons-wrapper">
               <ul class="home-icons-ul no-select">
                 <li class="home-icons-li"
-                *ngFor="let link of links" >
+                *ngFor="let link of links">
                   <a href={{link.url}} target="_blank">
                     <span class="home-icons-icon {{link.icon}}"></span>
                   </a>
@@ -26,11 +26,8 @@ export class HomeIcons {
   constructor(private http: Http) { }
 
   ngOnInit() {
-    this.getLinks();
-  }
-
-  getLinks() {
-    return this.http.get(this.linksUrl)
+    // Get Links data from server
+    this.http.get(this.linksUrl)
              .map((res: Response) => res.json())
              .subscribe(
                data => { this.links = data; },

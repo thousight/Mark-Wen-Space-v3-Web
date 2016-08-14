@@ -9,8 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var onLoad_1 = require("./onLoad");
+var onLoad_1 = require("./onLoad/onLoad");
 var home_1 = require("./home/home");
+var about_1 = require("./about/about");
 var App = (function () {
     function App() {
         this.hidden = true;
@@ -18,16 +19,22 @@ var App = (function () {
     }
     App.prototype.ngAfterContentInit = function () {
         var _this = this;
+        // Change loading screen to main content with 1s delay
         this.timeout = setTimeout(function () {
-            _this.hidden = false;
-            clearTimeout(_this.timeout);
+            _this.hidden = false; // Dismiss loading screen
+            $(".app").fadeIn(1500); // Fading animation
+            clearTimeout(_this.timeout); // Clear out timeout
         }, 1000);
+        // Initialize ScrollSpy
+        $(document).ready(function () {
+            $(".scrollspy").scrollSpy();
+        });
     };
     App = __decorate([
         core_1.Component({
             selector: "app",
-            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"content\" [hidden]=\"hidden\">\n              <home></home>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
-            directives: [onLoad_1.OnLoad, home_1.Home]
+            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home></home>\n              <about></about>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
+            directives: [onLoad_1.OnLoad, home_1.Home, about_1.About]
         }), 
         __metadata('design:paramtypes', [])
     ], App);

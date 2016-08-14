@@ -17,18 +17,16 @@ var HomeIcons = (function () {
         this.linksUrl = "http://mark-wen-space-v3-server.herokuapp.com/links";
     }
     HomeIcons.prototype.ngOnInit = function () {
-        this.getLinks();
-    };
-    HomeIcons.prototype.getLinks = function () {
         var _this = this;
-        return this.http.get(this.linksUrl)
+        // Get Links data from server
+        this.http.get(this.linksUrl)
             .map(function (res) { return res.json(); })
             .subscribe(function (data) { _this.links = data; }, function (err) { return console.error(err); });
     };
     HomeIcons = __decorate([
         core_1.Component({
             selector: "home-icons",
-            template: "\n            <div class=\"home-icons-wrapper\">\n              <ul class=\"home-icons-ul no-select\">\n                <li class=\"home-icons-li\"\n                *ngFor=\"let link of links\" >\n                  <a href={{link.url}} target=\"_blank\">\n                    <span class=\"home-icons-icon {{link.icon}}\"></span>\n                  </a>\n                </li>\n              </ul>\n            </div>\n            "
+            template: "\n            <div class=\"home-icons-wrapper\">\n              <ul class=\"home-icons-ul no-select\">\n                <li class=\"home-icons-li\"\n                *ngFor=\"let link of links\">\n                  <a href={{link.url}} target=\"_blank\">\n                    <span class=\"home-icons-icon {{link.icon}}\"></span>\n                  </a>\n                </li>\n              </ul>\n            </div>\n            "
         }), 
         __metadata('design:paramtypes', [http_1.Http])
     ], HomeIcons);

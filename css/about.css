@@ -1,0 +1,11 @@
+/** *********************** Mark Wen Space v.3 Web CSS ********************* **/
+/** ************************************************************************ **/
+
+/** ********************************* About ********************************* **/
+.About {
+  /*Vertically center all items*/
+  display: flex;
+  vertical-align: middle;
+  flex-direction: column;
+  justify-content: center;
+}
