@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { AllDataService } from "./allDataService";
 import { OnLoad } from "./onLoad";
 import { Home } from "./home/home";
 
@@ -7,17 +6,24 @@ import { Home } from "./home/home";
   selector: "app",
   template: `
             <!-- List all the main components inside div -->
-            <div *ngIf="allDataService.getLoading()">
+            <div class="content" [hidden]="hidden">
               <home></home>
             </div>
 
             <!-- List other components here -->
-            <onLoad *ngIf="allDataService.getLoading()"></onLoad>
+            <onLoad [hidden]="!hidden"></onLoad>
             `,
-  directives: [OnLoad, Home],
-  providers: [AllDataService]
+  directives: [OnLoad, Home]
 })
 
 export class App {
-  constructor(private allDataService: AllDataService) { }
+  hidden = true;
+  timeout = null;
+
+  ngAfterContentInit() {
+    this.timeout = setTimeout(() => {
+        this.hidden = false;
+        clearTimeout(this.timeout);
+      }, 1000);
+  }
 }

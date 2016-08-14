@@ -2,7 +2,6 @@ import { Component } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs/Rx";
 import "rxjs/add/operator/map";
-import { AllDataService } from "../allDataService";
 
 @Component({
   selector: "home-icons",
@@ -17,19 +16,17 @@ import { AllDataService } from "../allDataService";
                 </li>
               </ul>
             </div>
-            `,
-  providers: [AllDataService]
+            `
 })
 
 export class HomeIcons {
   public links;
   private linksUrl = "http://mark-wen-space-v3-server.herokuapp.com/links";
 
-  constructor(private http: Http, private allDataService: AllDataService) { }
+  constructor(private http: Http) { }
 
   ngOnInit() {
-    // this.getLinks();
-    this.links = this.allDataService.getLinks();
+    this.getLinks();
   }
 
   getLinks() {
