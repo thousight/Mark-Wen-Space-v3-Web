@@ -55,3 +55,6 @@ nav div ul li a {
 .brand-logo {
   height: 100%;
 }
+.side-nav {
+  z-index: 1000;
+}

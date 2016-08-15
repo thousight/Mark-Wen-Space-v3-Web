@@ -19,22 +19,28 @@ var NavBar = (function () {
             edge: "right",
             closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
         });
-        // Get Navbar fixed and change style when scrolled after Home
+        // Initialize navbar style
         $(".nav-wrapper").css({ "margin-top": -1 * $(".NavBar").height() });
-        $(".NavBarNav").css({ "backgroud-color": "transparent" });
+        $(".NavBarNav").addClass("transparent");
     };
     NavBar.prototype.ngAfterContentInit = function () {
+        // Mechanism for sticky navbar
         $(window).scroll(function () {
             var windowTop = $(window).scrollTop(); // Location of the top of the window
-            var navbarTop = $(".NavBar").offset().top; // Location of the top of navbar
-            if (windowTop >= navbarTop) {
+            var homeHeight = $(".Home").outerHeight();
+            var navbarHeight = $(".NavBar").height();
+            if (windowTop > (homeHeight - navbarHeight)) {
                 // Set navbar to fixed
+                $(".nav-wrapper").css({ "margin-top": "0px" });
+                $(".NavBar").addClass("navbar-fixed");
                 $(".NavBarNav").addClass("blue darken-1");
                 $(".NavBarNav").css({ "position": "fixed", "top": "0px" });
+                $(".hide-on-med-and-down .brand-logo .button-collapse").css({ "position": "fixed", "top": "0px" });
             }
             else {
                 // Set navbar to relative
                 $(".nav-wrapper").css({ "margin-top": -1 * $(".NavBar").height() });
+                $(".NavBar").removeClass("navbar-fixed");
                 $(".NavBarNav").css({ "position": "relative" });
                 $(".NavBarNav").removeClass("blue darken-1");
                 $(".NavBarNav").addClass("transparent");
