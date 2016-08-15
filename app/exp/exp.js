@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var About = (function () {
-    function About() {
+var Exp = (function () {
+    function Exp() {
     }
-    About = __decorate([
+    Exp = __decorate([
         core_1.Component({
-            selector: "about",
-            template: "\n            <div id=\"About\" class=\"About content section scrollspy\">\n\n            </div>\n            "
+            selector: "exp",
+            template: "\n            <div id=\"Exp\" class=\"Exp content section scrollspy\">\n\n            </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
-    ], About);
-    return About;
+    ], Exp);
+    return Exp;
 }());
-exports.About = About;
-//# sourceMappingURL=about.js.map
+exports.Exp = Exp;
+//# sourceMappingURL=exp.js.map

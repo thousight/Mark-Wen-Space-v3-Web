@@ -1,7 +1,9 @@
 import { Component } from "@angular/core";
 import { OnLoad } from "./onLoad/onLoad";
+import { NavBar } from "./navBar/navBar";
 import { Home } from "./home/home";
 import { About } from "./about/about";
+import { Exp } from "./exp/exp";
 declare var $: any;
 
 @Component({
@@ -10,13 +12,15 @@ declare var $: any;
             <!-- List all the main components inside div -->
             <div class="app content" [hidden]="hidden">
               <home></home>
+              <navBar></navBar>
               <about></about>
+              <exp></exp>
             </div>
 
             <!-- List other components here -->
             <onLoad [hidden]="!hidden"></onLoad>
             `,
-  directives: [OnLoad, Home, About]
+  directives: [OnLoad, NavBar, Home, About, Exp]
 })
 
 export class App {

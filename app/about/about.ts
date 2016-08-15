@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 @Component({
   selector: "about",
   template: `
-            <div class="About content section scrollspy">
+            <div id="About" class="About content section scrollspy">
 
             </div>
             `

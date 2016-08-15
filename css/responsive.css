@@ -47,7 +47,11 @@
 @media screen and (min-width: 426px) and (max-width: 768px) {
 
 }
-/*xm: smartphone*/
+/*xs: smartphone*/
 @media screen and (max-width: 425px) {
-
+  /*MW Logo on Navbar*/
+  .MWLogo {
+    width:56px;
+    height:56px;
+  }
 }

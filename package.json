@@ -36,6 +36,15 @@
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
-    "typings":"^1.0.4"
+    "typings": "^1.0.4"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular2-materialize": "npm:angular2-materialize@^3.0.3",
+      "materialize": "npm:materialize-css@^0.97.7"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
   }
 }

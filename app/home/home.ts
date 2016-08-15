@@ -4,7 +4,7 @@ import { HomeIcons } from "./home-icons";
 @Component({
   selector: "home",
   template: `
-            <div class="Home content section scrollspy">
+            <div id="Home" class="Home content section scrollspy">
               <div class="home-content-wrapper">
                 <h1 class="home-title no-select">Mark Wen</h1>
                 <h3 class="home-subtitle no-select">Web and Mobile Developer</h3>

@@ -1,7 +1,7 @@
 /** *********************** Mark Wen Space v.3 Web CSS ********************* **/
 /** ************************************************************************ **/
 
-/** ************************ Global & OnLoad Setting *********************** **/
+/** ******************** Global & OnLoad & Navbar Setting ****************** **/
 /*Full Screen Responsive Div*/
 html, body {
   height: 100%;
@@ -32,4 +32,26 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/*Navbar Settings*/
+.nav {
+  background-color: transparent;
+}
+/*Font size of nav links*/
+nav div ul li a {
+  font-size: 17px;
+}
+.side-nav a {
+  font-size: 1.2rem;
+}
+/*MW Logo on Navbar*/
+.MWLogo {
+  width:64px;
+  height:64px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.brand-logo {
+  height: 100%;
 }
