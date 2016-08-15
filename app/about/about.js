@@ -15,7 +15,7 @@ var About = (function () {
     About = __decorate([
         core_1.Component({
             selector: "about",
-            template: "\n            <div id=\"About\" class=\"About content section scrollspy\">\n\n            </div>\n            "
+            template: "\n            <div id=\"About\" class=\"About content section scrollspy\">\n              <div class=\"coverPhoto\"></div>\n              <div class=\"aboutCard row\">\n                <div class=\"col s12 m12 l8 offset-l2\">\n                  <div class=\"card\">\n                    <div class=\"card-content\">\n                      <span class=\"card-title\">Hi, I'm Mark!</span>\n                      <p>\n                        This is my personal resume website.\n                        I'm a CNIT Junior student in Purdue University.\n                        I enjoy website and application design, technology review, and playing badminton.\n                      </p>\n                    </div>\n                    <div class=\"card-action\">\n                      <a href=\"../../file/Guojie Wen Resume.pdf\">Download Resume</a>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
     ], About);

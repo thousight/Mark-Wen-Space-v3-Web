@@ -7,7 +7,7 @@ declare let $: any;
             <div id="navBar" class="NavBar">
               <nav class="NavBarNav blue darken-1">
                 <div class="nav-wrapper">
-                  <a href="#Home" class="brand-logo"><img class="MWLogo" src="./img/NavbarIcon.png" alt="HTML5 Icon"></a>
+                  <a href="#" class="brand-logo"><img class="MWLogo" src="./img/NavbarIcon.png" alt="HTML5 Icon"></a>
                   <ul class="right hide-on-med-and-down">
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#About">About</a></li>
@@ -50,8 +50,8 @@ export class NavBar {
     $(".NavBarNav").addClass("transparent");
   }
 
-  ngAfterContentInit() {
-    // Mechanism for sticky navbar
+  ngAfterViewInit() {
+    // Mechanism for sticky navbar, be careful with it
     $(window).scroll(() => {
       const windowTop = $(window).scrollTop(); // Location of the top of the window
       const homeHeight = $(".Home").outerHeight();
@@ -60,13 +60,17 @@ export class NavBar {
         // Set navbar to fixed
         $(".nav-wrapper").css({"margin-top": "0px"});
         $(".NavBar").addClass("navbar-fixed");
+        $(".About").css({"margin-top": "-64px"});
+        $(".NavBarNav").removeClass("transparent");
         $(".NavBarNav").addClass("blue darken-1");
         $(".NavBarNav").css({"position": "fixed", "top": "0px"});
         $(".hide-on-med-and-down .brand-logo .button-collapse").css({"position": "fixed", "top": "0px"})
       } else {
         // Set navbar to relative
         $(".nav-wrapper").css({"margin-top": -1 * $(".NavBar").height()});
+        $(".NavBar").css({"height": $(".NavBarNav").height() + "px"});
         $(".NavBar").removeClass("navbar-fixed");
+        $(".About").css({"margin-top": "-15px"});
         $(".NavBarNav").css({"position": "relative"});
         $(".NavBarNav").removeClass("blue darken-1");
         $(".NavBarNav").addClass("transparent");

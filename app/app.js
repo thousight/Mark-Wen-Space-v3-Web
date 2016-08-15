@@ -20,6 +20,14 @@ var App = (function () {
         this.timeout = null;
     }
     App.prototype.ngAfterContentInit = function () {
+        // Initialize ScrollSpy
+        $(document).ready(function () {
+            $(".scrollspy").scrollSpy({
+                scrollOffset: 100
+            });
+        });
+    };
+    App.prototype.ngAfterContentChecked = function () {
         var _this = this;
         // Change loading screen to main content with 1s delay
         this.timeout = setTimeout(function () {
@@ -27,12 +35,6 @@ var App = (function () {
             $(".app").fadeIn(1500); // Fading animation
             clearTimeout(_this.timeout); // Clear out timeout
         }, 1000);
-        // Initialize ScrollSpy
-        $(document).ready(function () {
-            $(".scrollspy").scrollSpy({
-                scrollOffset: "0px"
-            });
-        });
     };
     App = __decorate([
         core_1.Component({

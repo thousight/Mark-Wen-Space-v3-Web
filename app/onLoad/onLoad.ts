@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
     template: `
               <div class="OnLoad content">
                 <div class="OnLoadCentering">
-                  <div class="preloader-wrapper big active">
+                  <div class="preloader-wrapper big active" style="background-color: #FAFAFA">
                     <div class="spinner-layer spinner-blue">
                       <div class="circle-clipper left">
                         <div class="circle"></div>

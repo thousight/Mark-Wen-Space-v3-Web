@@ -4,8 +4,23 @@
 /** ********************************* About ********************************* **/
 .About {
   /*Vertically center all items*/
-  display: flex;
   vertical-align: middle;
   flex-direction: column;
   justify-content: center;
+  /*Move up a little bit*/
+  margin-top: -15px;
+}
+
+.coverPhoto {
+  width: 100%;
+  height: 315px;
+  background: url('../img/aboutCoverPic.jpg') center no-repeat scroll;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+}
+
+.aboutCard {
+  margin-top: -60px;
 }

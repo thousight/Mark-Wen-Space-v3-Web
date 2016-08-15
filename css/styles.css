@@ -58,3 +58,6 @@ nav div ul li a {
 .side-nav {
   z-index: 1000;
 }
+.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
