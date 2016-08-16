@@ -21,40 +21,40 @@ var NavBar = (function () {
         });
         // Initialize navbar style
         $(".nav-wrapper").css({ "margin-top": -1 * $(".NavBar").height() });
-        $(".NavBarNav").addClass("transparent");
     };
     NavBar.prototype.ngAfterViewInit = function () {
         // Mechanism for sticky navbar, be careful with it
         $(window).scroll(function () {
             var windowTop = $(window).scrollTop(); // Location of the top of the window
-            var homeHeight = $(".Home").outerHeight();
-            var navbarHeight = $(".NavBar").height();
-            if (windowTop > (homeHeight - navbarHeight)) {
+            var offset = $(".Home").outerHeight() - $(".NavBar").height();
+            var transparency = windowTop / offset;
+            $(".NavBarNav").css({ "background-color": "rgba(30, 136, 230, " + transparency + ")" });
+            if (windowTop > offset) {
                 // Set navbar to fixed
-                $(".nav-wrapper").css({ "margin-top": "0px" });
+                $(".About").css({ "margin-top": "-77px" });
                 $(".NavBar").addClass("navbar-fixed");
-                $(".About").css({ "margin-top": "-64px" });
                 $(".NavBarNav").removeClass("transparent");
                 $(".NavBarNav").addClass("blue darken-1");
+                // Don't try to combine these 2 lines below, it just won't work right
                 $(".NavBarNav").css({ "position": "fixed", "top": "0px" });
+                $(".nav-wrapper").css({ "margin-top": "0px" });
                 $(".hide-on-med-and-down .brand-logo .button-collapse").css({ "position": "fixed", "top": "0px" });
             }
             else {
                 // Set navbar to relative
-                $(".nav-wrapper").css({ "margin-top": -1 * $(".NavBar").height() });
+                $(".About").css({ "margin-top": "-15px" });
                 $(".NavBar").css({ "height": $(".NavBarNav").height() + "px" });
                 $(".NavBar").removeClass("navbar-fixed");
-                $(".About").css({ "margin-top": "-15px" });
                 $(".NavBarNav").css({ "position": "relative" });
                 $(".NavBarNav").removeClass("blue darken-1");
-                $(".NavBarNav").addClass("transparent");
+                $(".nav-wrapper").css({ "margin-top": -1 * $(".NavBar").height() });
             }
         });
     };
     NavBar = __decorate([
         core_1.Component({
             selector: "navBar",
-            template: "\n            <div id=\"navBar\" class=\"NavBar\">\n              <nav class=\"NavBarNav blue darken-1\">\n                <div class=\"nav-wrapper\">\n                  <a href=\"#\" class=\"brand-logo\"><img class=\"MWLogo\" src=\"./img/NavbarIcon.png\" alt=\"HTML5 Icon\"></a>\n                  <ul class=\"right hide-on-med-and-down\">\n                    <li><a href=\"#Home\">Home</a></li>\n                    <li><a href=\"#About\">About</a></li>\n                    <li><a href=\"#Exp\">Experience</a></li>\n                    <li><a href=\"#Portfolio\">Portfolio</a></li>\n                    <li><a href=\"#Education\">Education</a></li>\n                    <li><a href=\"#Skills\">Skills</a></li>\n                    <li><a href=\"#Gallery\">Gallery</a></li>\n                    <li><a href=\"#Contact\">Contact</a></li>\n                  </ul>\n                  <ul class=\"side-nav\" id=\"mobile-demo\">\n                    <li><a href=\"#Home\">Home</a></li>\n                    <li><a href=\"#About\">About</a></li>\n                    <li><a href=\"#Exp\">Experience</a></li>\n                    <li><a href=\"#Portfolio\">Portfolio</a></li>\n                    <li><a href=\"#Education\">Education</a></li>\n                    <li><a href=\"#Skills\">Skills</a></li>\n                    <li><a href=\"#Gallery\">Gallery</a></li>\n                    <li><a href=\"#Contact\">Contact</a></li>\n                  </ul>\n                  <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse right\"><i class=\"material-icons\">menu</i></a>\n                </div>\n              </nav>\n            </div>\n            "
+            template: "\n            <div id=\"navBar\" class=\"NavBar\">\n              <nav class=\"NavBarNav blue darken-1\">\n                <div class=\"nav-wrapper\">\n                  <a href=\"#\" class=\"brand-logo\"><img class=\"MWLogo\" src=\"./img/NavbarIcon.png\" alt=\"HTML5 Icon\"></a>\n                  <ul class=\"right hide-on-med-and-down\">\n                    <li><a class=\"navbar-items\" href=\"#Home\">Home</a></li>\n                    <li><a class=\"navbar-items\" href=\"#About\">About</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Exp\">Experience</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Portfolio\">Portfolio</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Education\">Education</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Skills\">Skills</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Gallery\">Gallery</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Contact\">Contact</a></li>\n                  </ul>\n                  <ul class=\"side-nav\" id=\"mobile-demo\">\n                    <li><a class=\"navbar-items\" href=\"#Home\">Home</a></li>\n                    <li><a class=\"navbar-items\" href=\"#About\">About</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Exp\">Experience</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Portfolio\">Portfolio</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Education\">Education</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Skills\">Skills</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Gallery\">Gallery</a></li>\n                    <li><a class=\"navbar-items\" href=\"#Contact\">Contact</a></li>\n                  </ul>\n                  <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse right\"><i class=\"material-icons\">menu</i></a>\n                </div>\n              </nav>\n            </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
     ], NavBar);

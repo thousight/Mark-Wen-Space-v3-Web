@@ -31,7 +31,7 @@ export class App {
     // Initialize ScrollSpy
     $(document).ready(function(){
       $(".scrollspy").scrollSpy({
-        scrollOffset: 100
+        scrollOffset: "0px"
       });
     });
   }

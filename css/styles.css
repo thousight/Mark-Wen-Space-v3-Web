@@ -22,6 +22,9 @@ html, body {
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;
 }
+h6 {
+  font-size: 1.2rem;
+}
 
 /*Loading Spinner*/
 .OnLoad {
