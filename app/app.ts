@@ -11,10 +11,10 @@ declare var $: any;
   template: `
             <!-- List all the main components inside div -->
             <div class="app content" [hidden]="hidden">
-              <home></home>
+              <home class="scrollspy"></home>
               <navBar></navBar>
-              <about></about>
-              <exp></exp>
+              <about class="scrollspy"></about>
+              <exp class="scrollspy"></exp>
             </div>
 
             <!-- List other components here -->
@@ -26,6 +26,15 @@ declare var $: any;
 export class App {
   private hidden = true;
   timeout = null;
+
+  ngAfterContentInit() {
+    // Initialize Spyscroll
+    $(document).ready(() => {
+      $(".scrollspy").scrollSpy({
+        scrollOffset: 0
+      });
+    });
+  }
 
   ngAfterContentChecked() {
     // Change loading screen to main content with 1s delay
