@@ -7,7 +7,7 @@ declare let $: any;
             <div id="navBar" class="NavBar">
               <nav class="NavBarNav blue darken-1">
                 <div class="nav-wrapper">
-                  <a href="#Home" class="brand-logo"><img class="MWLogo" src="./img/NavbarIcon.png" alt="HTML5 Icon"></a>
+                  <a id="BrandLogo" class="brand-logo"><img class="MWLogo" src="./img/NavbarIcon.png" alt="HTML5 Icon"></a>
                   <ul class="right hide-on-med-and-down">
                     <li><a class="navbar-items" href="#Home">Home</a></li>
                     <li><a class="navbar-items" href="#About">About</a></li>
@@ -75,6 +75,12 @@ export class NavBar {
         $(".NavBarNav").removeClass("blue darken-1");
         $(".nav-wrapper").css({"margin-top": -1 * $(".NavBar").height()});
       }
+    });
+
+    $("#BrandLogo").click(() => {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 350);
     });
   }
 }
