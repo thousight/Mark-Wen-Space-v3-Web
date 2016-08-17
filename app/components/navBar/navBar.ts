@@ -50,12 +50,24 @@ export class NavBar {
   }
 
   ngAfterViewInit() {
-    // Mechanism for sticky navbar, be careful with it
+    this.navbarScrollEffects();
+
+    // When you click BrandLogo it brings you to top
+    $("#BrandLogo").click(() => {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 350);
+    });
+  }
+
+  // Mechanism for sticky navbar and transparency, be careful with it
+  navbarScrollEffects() {
     $(window).scroll(() => {
       const windowTop = $(window).scrollTop(); // Location of the top of the window
       const offset = $(".Home").outerHeight() - $(".NavBar").height();
       const transparency = windowTop / offset;
-      $(".NavBarNav").css({"background-color": `rgba(33, 150, 224, ${transparency})`});
+      $(".NavBarNav").css({"background-color": `rgba(33, 150, 224, ${transparency})`}); // Modify transparency
+
       if (windowTop > offset) {
         // Set navbar to fixed
         $(".About").css({"margin-top": "-77px"});
@@ -75,13 +87,6 @@ export class NavBar {
         $(".NavBarNav").removeClass("blue");
         $(".nav-wrapper").css({"margin-top": -1 * $(".NavBar").height()});
       }
-    });
-
-    // When you click BrandLogo it brings you to top
-    $("#BrandLogo").click(() => {
-      $("html, body").animate({
-        scrollTop: 0
-      }, 350);
     });
   }
 }
