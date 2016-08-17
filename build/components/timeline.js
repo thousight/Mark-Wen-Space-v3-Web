@@ -27,7 +27,7 @@ var Timeline = (function () {
     Timeline = __decorate([
         core_1.Component({
             selector: "timeline",
-            template: "\n              <div class=\"Timeline\">\n                <div class=\"grayLine\"></div>\n                <div class=\"timeline-content\">\n                  \n                </div>\n              </div>\n            "
+            template: "\n              <div class=\"Timeline\">\n                <div class=\"grayLine\"></div>\n                <div *ngFor=\"let data of data\" class=\"timeline-content\">\n                  <!-- {{data.time}} -->\n                </div>\n              </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
     ], Timeline);

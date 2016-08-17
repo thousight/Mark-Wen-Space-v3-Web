@@ -5,8 +5,8 @@ import { Component, Input } from "@angular/core";
   template: `
               <div class="Timeline">
                 <div class="grayLine"></div>
-                <div class="timeline-content">
-                  
+                <div *ngFor="let data of data" class="timeline-content">
+                  <!-- {{data.time}} -->
                 </div>
               </div>
             `

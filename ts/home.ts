@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { HomeIcons } from "./home-icons";
+import { HomeIcons } from "./components/home-icons";
 
 @Component({
   selector: "home",

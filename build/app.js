@@ -9,11 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var onLoad_1 = require("./components/onLoad/onLoad");
-var navBar_1 = require("./components/navBar/navBar");
-var home_1 = require("./home/home");
-var about_1 = require("./about/about");
-var exp_1 = require("./exp/exp");
+var onLoad_1 = require("./components/onLoad");
+var navBar_1 = require("./components/navBar");
+var home_1 = require("./home");
+var about_1 = require("./about");
+var exp_1 = require("./exp");
 var App = (function () {
     function App() {
         this.hidden = true;

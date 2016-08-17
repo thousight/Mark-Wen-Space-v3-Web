@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Http, Response } from "@angular/http";
-import { Title } from "../components/title/title";
-import { Timeline } from "../components/timeline/timeline";
+import { Title } from "./components/title";
+import { Timeline } from "./components/timeline";
 
 @Component({
   selector: "exp",

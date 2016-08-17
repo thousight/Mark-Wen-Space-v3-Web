@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-import { OnLoad } from "./components/onLoad/onLoad";
-import { NavBar } from "./components/navBar/navBar";
-import { Home } from "./home/home";
-import { About } from "./about/about";
-import { Exp } from "./exp/exp";
+import { OnLoad } from "./components/onLoad";
+import { NavBar } from "./components/navBar";
+import { Home } from "./home";
+import { About } from "./about";
+import { Exp } from "./exp";
 declare var $: any;
 
 @Component({

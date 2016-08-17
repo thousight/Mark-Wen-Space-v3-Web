@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var title_1 = require("../components/title/title");
-var timeline_1 = require("../components/timeline/timeline");
+var title_1 = require("./components/title");
+var timeline_1 = require("./components/timeline");
 var Exp = (function () {
     function Exp(http) {
         this.http = http;
