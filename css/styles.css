@@ -1,7 +1,7 @@
 /** *********************** Mark Wen Space v.3 Web CSS ********************* **/
 /** ************************************************************************ **/
 
-/** ******************** Global & OnLoad & Navbar Setting ****************** **/
+/** **************** Global & OnLoad & Navbar & Title Setting ************** **/
 /*Full Screen Responsive Div*/
 html, body {
   height: 100%;
@@ -63,4 +63,16 @@ nav div ul li a {
 }
 .active {
   background-color: rgba(0, 0, 0, 0.1);
+}
+/*Titles*/
+title {
+  display: initial;
+}
+.title {
+  text-align: center;
+  margin-top: 100px;
+  text-decoration: underline;
+}
+.titleIcon {
+  text-decoration: underline;
 }

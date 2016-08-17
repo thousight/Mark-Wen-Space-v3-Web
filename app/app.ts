@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { OnLoad } from "./onLoad/onLoad";
-import { NavBar } from "./navBar/navBar";
+import { OnLoad } from "./components/onLoad/onLoad";
+import { NavBar } from "./components/navBar/navBar";
 import { Home } from "./home/home";
 import { About } from "./about/about";
 import { Exp } from "./exp/exp";

@@ -9,21 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var title_1 = require("../components/title/title");
-var Exp = (function () {
-    function Exp() {
-        this.icon = "briefcase";
-        this.title = "Experience";
+var Title = (function () {
+    function Title() {
     }
-    Exp = __decorate([
+    __decorate([
+        core_1.Input("icon"), 
+        __metadata('design:type', String)
+    ], Title.prototype, "icon", void 0);
+    __decorate([
+        core_1.Input("title"), 
+        __metadata('design:type', String)
+    ], Title.prototype, "title", void 0);
+    Title = __decorate([
         core_1.Component({
-            selector: "exp",
-            template: "\n            <div id=\"Exp\" class=\"Exp content section scrollspy\">\n              <title [icon]=\"icon\" [title]=\"title\"></title>\n            </div>\n            ",
-            directives: [title_1.Title]
+            selector: "title",
+            template: "\n              <h3 class=\"title\"><i class=\"fa fa-{{icon}} titleIcon\" aria-hidden=\"true\"></i> {{title}}</h3>\n            "
         }), 
         __metadata('design:paramtypes', [])
-    ], Exp);
-    return Exp;
+    ], Title);
+    return Title;
 }());
-exports.Exp = Exp;
-//# sourceMappingURL=exp.js.map
+exports.Title = Title;
+//# sourceMappingURL=title.js.map

@@ -10,7 +10,7 @@ import { Component } from "@angular/core";
                   <div class="card center">
                     <div class="about-upper-card-content card-content">
                     <div class="profilePic"></div>
-                      <span class="card-title">Hi, I'm Mark!</span>
+                      <span class="card-title about-title">Hi, I'm Mark!</span>
                       <p class="card-paragraph">
                         My legal name is Guojie Wen, since my Chinese name is 温国杰.
                         I'm pursuing my bachelor degree as a 3rd-year Computer and Information Technology in Purdue University.
@@ -61,5 +61,6 @@ export class About {
     // Initialize some CSS through jQuery since they don't work when written in stylesheets for some reason
     $(".card-paragraph").css({"margin-top": "18px"});
     $(".about-lower-card").css({"padding": "20px 20px 0px 20px"});
+    $(".about-title").css({"font-size": "32px"});
   }
 }

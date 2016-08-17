@@ -55,13 +55,13 @@ export class NavBar {
       const windowTop = $(window).scrollTop(); // Location of the top of the window
       const offset = $(".Home").outerHeight() - $(".NavBar").height();
       const transparency = windowTop / offset;
-      $(".NavBarNav").css({"background-color": `rgba(30, 136, 230, ${transparency})`});
+      $(".NavBarNav").css({"background-color": `rgba(33, 150, 224, ${transparency})`});
       if (windowTop > offset) {
         // Set navbar to fixed
         $(".About").css({"margin-top": "-77px"});
         $(".NavBar").addClass("navbar-fixed");
         $(".NavBarNav").removeClass("transparent");
-        $(".NavBarNav").addClass("blue darken-1");
+        $(".NavBarNav").addClass("blue");
         // Don't try to combine these 2 lines below, it just won't work right
         $(".NavBarNav").css({"position": "fixed", "top": "0px"});
         $(".nav-wrapper").css({"margin-top": "0px"});
@@ -72,7 +72,7 @@ export class NavBar {
         $(".NavBar").css({"height": $(".NavBarNav").height() + "px"});
         $(".NavBar").removeClass("navbar-fixed");
         $(".NavBarNav").css({"position": "relative"});
-        $(".NavBarNav").removeClass("blue darken-1");
+        $(".NavBarNav").removeClass("blue");
         $(".nav-wrapper").css({"margin-top": -1 * $(".NavBar").height()});
       }
     });
