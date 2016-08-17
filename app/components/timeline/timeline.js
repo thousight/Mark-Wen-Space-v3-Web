@@ -9,22 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var title_1 = require("../components/title/title");
-var timeline_1 = require("../components/timeline/timeline");
-var Exp = (function () {
-    function Exp() {
-        this.titleIcon = "briefcase";
-        this.titleTitle = "Experience";
+var Timeline = (function () {
+    function Timeline() {
     }
-    Exp = __decorate([
+    __decorate([
+        core_1.Input("icon"), 
+        __metadata('design:type', String)
+    ], Timeline.prototype, "icon", void 0);
+    __decorate([
+        core_1.Input("title"), 
+        __metadata('design:type', String)
+    ], Timeline.prototype, "title", void 0);
+    Timeline = __decorate([
         core_1.Component({
-            selector: "exp",
-            template: "\n            <div id=\"Exp\" class=\"Exp content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <timeline></timeline>\n            </div>\n            ",
-            directives: [title_1.Title, timeline_1.Timeline]
+            selector: "timeline",
+            template: "\n              <div class=\"Timeline\">\n\n              </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
-    ], Exp);
-    return Exp;
+    ], Timeline);
+    return Timeline;
 }());
-exports.Exp = Exp;
-//# sourceMappingURL=exp.js.map
+exports.Timeline = Timeline;
+//# sourceMappingURL=timeline.js.map
