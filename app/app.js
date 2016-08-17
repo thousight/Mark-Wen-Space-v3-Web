@@ -19,14 +19,6 @@ var App = (function () {
         this.hidden = true;
         this.timeout = null;
     }
-    App.prototype.ngAfterContentInit = function () {
-        // Initialize ScrollSpy
-        $(document).ready(function () {
-            $(".scrollspy").scrollSpy({
-                scrollOffset: "0px"
-            });
-        });
-    };
     App.prototype.ngAfterContentChecked = function () {
         var _this = this;
         // Change loading screen to main content with 1s delay

@@ -27,15 +27,6 @@ export class App {
   private hidden = true;
   timeout = null;
 
-  ngAfterContentInit() {
-    // Initialize ScrollSpy
-    $(document).ready(function(){
-      $(".scrollspy").scrollSpy({
-        scrollOffset: "0px"
-      });
-    });
-  }
-
   ngAfterContentChecked() {
     // Change loading screen to main content with 1s delay
     this.timeout = setTimeout(() => {
