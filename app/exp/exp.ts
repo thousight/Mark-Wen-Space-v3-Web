@@ -12,6 +12,6 @@ import { Title } from "../components/title/title";
 })
 
 export class Exp {
-  icon: string = "briefcase";
-  title: string = "Experience";
+  private icon = "briefcase";
+  private title = "Experience";
 }
