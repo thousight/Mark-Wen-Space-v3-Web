@@ -23,7 +23,7 @@ export class Exp {
   constructor(private http: Http) { }
 
   ngOnInit() {
-    // Get Links data from server
+    // Get Exp data from server
     this.http.get(this.expUrl)
              .map((res: Response) => res.json())
              .subscribe(

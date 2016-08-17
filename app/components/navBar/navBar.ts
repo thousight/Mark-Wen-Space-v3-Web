@@ -5,7 +5,7 @@ declare let $: any;
   selector: "navBar",
   template: `
             <div id="navBar" class="NavBar">
-              <nav class="NavBarNav blue darken-1">
+              <nav class="NavBarNav blue">
                 <div class="nav-wrapper">
                   <a id="BrandLogo" class="brand-logo"><img class="MWLogo" src="./img/NavbarIcon.png" alt="HTML5 Icon"></a>
                   <ul class="right hide-on-med-and-down">

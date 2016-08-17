@@ -21,7 +21,7 @@ var Exp = (function () {
     }
     Exp.prototype.ngOnInit = function () {
         var _this = this;
-        // Get Links data from server
+        // Get Exp data from server
         this.http.get(this.expUrl)
             .map(function (res) { return res.json(); })
             .subscribe(function (data) { _this.exp = data; }, function (err) { return console.error(err); });
