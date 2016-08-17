@@ -50,6 +50,7 @@ var NavBar = (function () {
                 $(".nav-wrapper").css({ "margin-top": -1 * $(".NavBar").height() });
             }
         });
+        // When you click BrandLogo it brings you to top
         $("#BrandLogo").click(function () {
             $("html, body").animate({
                 scrollTop: 0

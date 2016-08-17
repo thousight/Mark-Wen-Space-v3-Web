@@ -77,6 +77,7 @@ export class NavBar {
       }
     });
 
+    // When you click BrandLogo it brings you to top
     $("#BrandLogo").click(() => {
       $("html, body").animate({
         scrollTop: 0
