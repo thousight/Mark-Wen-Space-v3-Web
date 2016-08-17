@@ -15,7 +15,7 @@ var NavBar = (function () {
     NavBar.prototype.ngOnInit = function () {
         // Initialize sidebar at start
         $(".button-collapse").sideNav({
-            menuWidth: 300,
+            menuWidth: 240,
             edge: "right",
             closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
         });
