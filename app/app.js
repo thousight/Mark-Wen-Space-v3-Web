@@ -39,7 +39,7 @@ var App = (function () {
     App = __decorate([
         core_1.Component({
             selector: "app",
-            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home class=\"scrollspy\"></home>\n              <navBar></navBar>\n              <about class=\"scrollspy\"></about>\n              <exp class=\"scrollspy\"></exp>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
+            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home></home>\n              <navBar></navBar>\n              <about></about>\n              <exp></exp>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
             directives: [onLoad_1.OnLoad, navBar_1.NavBar, home_1.Home, about_1.About, exp_1.Exp]
         }), 
         __metadata('design:paramtypes', [])

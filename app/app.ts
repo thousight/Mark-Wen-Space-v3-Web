@@ -11,10 +11,10 @@ declare var $: any;
   template: `
             <!-- List all the main components inside div -->
             <div class="app content" [hidden]="hidden">
-              <home class="scrollspy"></home>
+              <home></home>
               <navBar></navBar>
-              <about class="scrollspy"></about>
-              <exp class="scrollspy"></exp>
+              <about></about>
+              <exp></exp>
             </div>
 
             <!-- List other components here -->
