@@ -20,10 +20,14 @@ var Timeline = (function () {
         core_1.Input("title"), 
         __metadata('design:type', String)
     ], Timeline.prototype, "title", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], Timeline.prototype, "data", void 0);
     Timeline = __decorate([
         core_1.Component({
             selector: "timeline",
-            template: "\n              <div class=\"Timeline\">\n\n              </div>\n            "
+            template: "\n              <div class=\"Timeline\">\n                <div class=\"grayLine\"></div>\n                <div class=\"timeline-content\">\n                  \n                </div>\n              </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
     ], Timeline);

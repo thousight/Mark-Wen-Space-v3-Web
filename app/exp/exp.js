@@ -9,20 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
 var title_1 = require("../components/title/title");
 var timeline_1 = require("../components/timeline/timeline");
 var Exp = (function () {
-    function Exp() {
+    function Exp(http) {
+        this.http = http;
         this.titleIcon = "briefcase";
         this.titleTitle = "Experience";
+        this.expUrl = "http://mark-wen-space-v3-server.herokuapp.com/Exp";
     }
+    Exp.prototype.ngOnInit = function () {
+        var _this = this;
+        // Get Links data from server
+        this.http.get(this.expUrl)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) { _this.exp = data; }, function (err) { return console.error(err); });
+    };
     Exp = __decorate([
         core_1.Component({
             selector: "exp",
-            template: "\n            <div id=\"Exp\" class=\"Exp content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <timeline></timeline>\n            </div>\n            ",
+            template: "\n            <div id=\"Exp\" class=\"Exp content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <timeline [data]=\"exp\"></timeline>\n            </div>\n            ",
             directives: [title_1.Title, timeline_1.Timeline]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], Exp);
     return Exp;
 }());

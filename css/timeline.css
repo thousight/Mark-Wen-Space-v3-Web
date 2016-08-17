@@ -5,3 +5,11 @@
 .Timeline {
   width: 100%;
 }
+.grayLine {
+  width: 3px;
+  height: 70%;
+  background: #bdbdbd;
+  margin: 35px 50%;
+  position: absolute;
+  border-radius: 25px;
+}
