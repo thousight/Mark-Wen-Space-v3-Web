@@ -7,9 +7,13 @@
 }
 .grayLine {
   width: 3px;
-  height: 70%;
+  height: 85%;
   background: #bdbdbd;
   margin: 35px 50%;
   position: absolute;
   border-radius: 25px;
+}
+.timeline-card-image {
+  width: 150px;
+  height: 150px;
 }
