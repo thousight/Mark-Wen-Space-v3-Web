@@ -36,15 +36,15 @@ import { Component } from "@angular/core";
                       </div>
                       <div class="col s6 m3 l3">
                       <i class="about-icon fa fa-mobile fa-2x" aria-hidden="true"></i>
-                        <p>Smartphone</p>
+                        <p>Tech Review</p>
                       </div>
                       <div class="col s6 m3 l3">
                         <i class="about-icon fa fa-laptop fa-2x" aria-hidden="true"></i>
-                        <p>Computer</p>
+                        <p>Coding</p>
                       </div>
                       <div class="col s6 m3 l3">
                         <i class="about-icon fa fa-car fa-2x" aria-hidden="true"></i>
-                        <p>Car</p>
+                        <p>Roadtrip</p>
                       </div>
                     </div>
                   </div>
