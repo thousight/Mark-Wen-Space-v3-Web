@@ -62,6 +62,12 @@
   .grayLine {
     display: none;
   }
+  .card::before {
+    display: none;
+  }
+  .card::after {
+    display: none;
+  }
 }
 
 /*m*/
