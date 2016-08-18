@@ -20,8 +20,9 @@ import { Component, Input } from "@angular/core";
                             <p style="margin-top: 5px">{{data.time}}</p>
                           </div>
                           <div class="card-reveal">
+                            <i class="timeline-reveal-close material-icons card-title">close</i>
                             <div class="timeline-desc">
-                              <span class="timeline-card-title card-title" style="line-height: 25px">{{data.organization}}<i class="material-icons right">close</i></span>
+                              <span class="timeline-card-title card-title" style="line-height: 25px">{{data.organization}}</span>
                               <ul *ngFor="let bullet of data.desc">
                                 <li>{{bullet}}</li>
                               </ul>
