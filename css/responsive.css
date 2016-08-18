@@ -1,7 +1,7 @@
 /** *********************** Mark Wen Space v.3 Web CSS ********************* **/
 /** ************************************************************************ **/
 
-/** *********************** Responsive Detail Settings ********************* **/
+/** ********************** Prefered Responsive Settings ******************** **/
 /*xxl: 2k or 4k monitors*/
 @media screen and (min-width: 1921px) {
   .home-title {
@@ -63,7 +63,26 @@
   .timeline-card-content {
     max-width: 220px;
   }
+}
+
+/** ******************* Materializecss Responsive Settings ***************** **/
+/*s*/
+@media screen and (max-width: 600px) {
   .grayLine {
     display: none;
+  }
+}
+
+/*m*/
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .card.horizontal .card-image {
+    min-width: 105px;
+  }
+}
+
+/*l*/
+@media screen and (min-width: 993px) {
+  .card.horizontal .card-image {
+    min-width: 105px;
   }
 }
