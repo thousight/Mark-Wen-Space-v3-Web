@@ -15,5 +15,19 @@
 }
 .timeline-card-image {
   width: 150px;
-  height: 150px;
+}
+.timeline-content {
+  padding-top: 30px;
+}
+.timeline-card-content {
+  display: block;
+}
+.timeline-data-location {
+  font-style: italic;
+}
+.timeline-more-button {
+  float: right;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 5px;
 }

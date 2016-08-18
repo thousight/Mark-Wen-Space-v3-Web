@@ -6,7 +6,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: #FAFAFA;
+  background-color: #F5F5F5;
 }
 .content {
   height: 100%;
@@ -62,11 +62,12 @@ nav div ul li a {
   z-index: 1000;
 }
 .active {
+  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.1);
 }
 /*Titles*/
 title {
-  display: initial;
+  display: block;
 }
 .title {
   text-align: center;
