@@ -9,6 +9,10 @@ import { Component, Input } from "@angular/core";
                   <div *ngFor="let data of data; let odd = odd; let even = even">
                     <div class="row" style="margin-bottom: 0px">
                       <div class="col s12 m6 l4" [ngClass]="{ 'offset-l6 offset-m6': odd, 'offset-l2': even }">
+                        <div class="timeline-pointer">
+                          <div class="pointer-bar"></div>
+                          <div class="pointer-circle"></div>
+                        </div>
                         <div class="card horizontal hoverable">
                           <div class="card-image waves-effect waves-block waves-light">
                             <img class="timeline-card-image activator" src="../../{{data.image}}" >
@@ -28,7 +32,7 @@ import { Component, Input } from "@angular/core";
                               </ul>
                             </div>
                           </div>
-                          <i class="timeline-more-button material-icons activator">more_vert</i>
+                          <span><i class="timeline-more-button material-icons activator">more_vert</i></span>
                         </div>
                       </div>
                     </div>

@@ -35,23 +35,17 @@
 
 /*lg: normal monitors*/
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .timeline-card-content {
-    max-width: 275px;
-  }
+
 }
 
 /*md: small monitors*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .timeline-card-content {
-    max-width: 245px;
-  }
+
 }
 
 /*sm: tablets*/
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  .timeline-card-content {
-    max-width: 200px;
-  }
+
 }
 /*xs: smartphone*/
 @media screen and (max-width: 425px) {
@@ -59,9 +53,6 @@
   .MWLogo {
     width:56px;
     height:56px;
-  }
-  .timeline-card-content {
-    max-width: 220px;
   }
 }
 
@@ -75,7 +66,7 @@
 
 /*m*/
 @media screen and (min-width: 601px) and (max-width: 992px) {
-  
+
 }
 
 /*l*/
