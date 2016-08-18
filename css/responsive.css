@@ -75,14 +75,10 @@
 
 /*m*/
 @media screen and (min-width: 601px) and (max-width: 992px) {
-  .card.horizontal .card-image {
-    min-width: 105px;
-  }
+  
 }
 
 /*l*/
 @media screen and (min-width: 993px) {
-  .card.horizontal .card-image {
-    min-width: 105px;
-  }
+
 }

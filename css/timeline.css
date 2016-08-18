@@ -14,13 +14,14 @@
   border-radius: 25px;
 }
 .timeline-card-image {
-  width: 150px;
+  width: 30%;
 }
 .timeline-content {
   padding-top: 30px;
 }
 .timeline-card-content {
   display: block;
+  width: 70%;
 }
 .timeline-data-location {
   font-style: italic;
