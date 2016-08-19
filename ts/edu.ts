@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { Title } from "./components/title";
 import { Timeline } from "./components/timeline";
@@ -17,18 +17,5 @@ import { Timeline } from "./components/timeline";
 export class Edu {
   private titleIcon = "graduation-cap";
   private titleTitle = "Education";
-  public edu;
-  private eduUrl = "http://mark-wen-space-v3-server.herokuapp.com/Edu";
-
-  constructor(private http: Http) { }
-
-  ngOnInit() {
-    // Get Exp data from server
-    this.http.get(this.eduUrl)
-             .map((res: Response) => res.json())
-             .subscribe(
-               data => { this.edu = data.sort((a, b) => { return a.order - b.order; }); },
-               err => console.log(err)
-             );
-  }
+  @Input("data") edu: Array<Object>;
 }

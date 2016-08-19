@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { Title } from "./components/title";
 import { Timeline } from "./components/timeline";
@@ -17,18 +17,5 @@ import { Timeline } from "./components/timeline";
 export class Exp {
   private titleIcon = "briefcase";
   private titleTitle = "Experience";
-  public exp;
-  private expUrl = "http://mark-wen-space-v3-server.herokuapp.com/Exp";
-
-  constructor(private http: Http) { }
-
-  ngOnInit() {
-    // Get Exp data from server
-    this.http.get(this.expUrl)
-             .map((res: Response) => res.json())
-             .subscribe(
-               data => { this.exp = data.sort((a, b) => { return a.order - b.order; }); },
-               err => console.log(err)
-             );
-  }
+  @Input("data") exp: Array<Object>;
 }

@@ -9,30 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
 var title_1 = require("./components/title");
 var timeline_1 = require("./components/timeline");
 var Edu = (function () {
-    function Edu(http) {
-        this.http = http;
+    function Edu() {
         this.titleIcon = "graduation-cap";
         this.titleTitle = "Education";
-        this.eduUrl = "http://mark-wen-space-v3-server.herokuapp.com/Edu";
     }
-    Edu.prototype.ngOnInit = function () {
-        var _this = this;
-        // Get Exp data from server
-        this.http.get(this.eduUrl)
-            .map(function (res) { return res.json(); })
-            .subscribe(function (data) { _this.edu = data.sort(function (a, b) { return a.order - b.order; }); }, function (err) { return console.log(err); });
-    };
+    __decorate([
+        core_1.Input("data"), 
+        __metadata('design:type', Array)
+    ], Edu.prototype, "edu", void 0);
     Edu = __decorate([
         core_1.Component({
             selector: "edu",
             template: "\n            <div id=\"Edu\" class=\"Edu content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <timeline [data]=\"edu\"></timeline>\n            </div>\n            ",
             directives: [title_1.Title, timeline_1.Timeline]
         }), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [])
     ], Edu);
     return Edu;
 }());

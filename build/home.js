@@ -13,10 +13,14 @@ var home_icons_1 = require("./components/home-icons");
 var Home = (function () {
     function Home() {
     }
+    __decorate([
+        core_1.Input("data"), 
+        __metadata('design:type', Array)
+    ], Home.prototype, "links", void 0);
     Home = __decorate([
         core_1.Component({
             selector: "home",
-            template: "\n            <div id=\"Home\" class=\"Home content section scrollspy\">\n              <div class=\"home-content-wrapper\">\n                <h1 class=\"home-title no-select\">Mark Wen</h1>\n                <h3 class=\"home-subtitle no-select\">Web and Mobile Developer</h3>\n                <home-icons></home-icons>\n              </div>\n            </div>\n            ",
+            template: "\n            <div id=\"Home\" class=\"Home content section scrollspy\">\n              <div class=\"home-content-wrapper\">\n                <h1 class=\"home-title no-select\">Mark Wen</h1>\n                <h3 class=\"home-subtitle no-select\">Web and Mobile Developer</h3>\n                <home-icons [data]=\"links\"></home-icons>\n              </div>\n            </div>\n            ",
             directives: [home_icons_1.HomeIcons]
         }), 
         __metadata('design:paramtypes', [])

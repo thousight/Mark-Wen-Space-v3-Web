@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs/Rx";
 import "rxjs/add/operator/map";
@@ -20,18 +20,5 @@ import "rxjs/add/operator/map";
 })
 
 export class HomeIcons {
-  public links;
-  private linksUrl = "http://mark-wen-space-v3-server.herokuapp.com/links";
-
-  constructor(private http: Http) { }
-
-  ngOnInit() {
-    // Get Links data from server
-    this.http.get(this.linksUrl)
-             .map((res: Response) => res.json())
-             .subscribe(
-               data => { this.links = data; },
-               err => console.log(err)
-             );
-  }
+  @Input("data") links: Array<Object>;
 }

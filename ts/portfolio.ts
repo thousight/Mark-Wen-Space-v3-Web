@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { Title } from "./components/title";
 
@@ -15,18 +15,5 @@ import { Title } from "./components/title";
 export class Portfolio {
   private titleIcon = "folder-open";
   private titleTitle = "Portfolio";
-  public portfolio;
-  private portfolioUrl = "http://mark-wen-space-v3-server.herokuapp.com/Portfolio";
-
-  constructor(private http: Http) { }
-
-  ngOnInit() {
-    // Get Exp data from server
-    this.http.get(this.portfolioUrl)
-             .map((res: Response) => res.json())
-             .subscribe(
-               data => { this.portfolio = data.sort((a, b) => { return a.order - b.order; }); },
-               err => console.log(err)
-             );
-  }
+  @Input("data") portfolio: Array<Object>;
 }
