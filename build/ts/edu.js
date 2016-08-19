@@ -15,7 +15,7 @@ var timeline_1 = require("./components/timeline");
 var Edu = (function () {
     function Edu(http) {
         this.http = http;
-        this.titleIcon = "briefcase";
+        this.titleIcon = "graduation-cap";
         this.titleTitle = "Education";
         this.eduUrl = "http://mark-wen-space-v3-server.herokuapp.com/Edu";
     }
@@ -24,7 +24,7 @@ var Edu = (function () {
         // Get Exp data from server
         this.http.get(this.eduUrl)
             .map(function (res) { return res.json(); })
-            .subscribe(function (data) { _this.edu = data; }, function (err) { return console.error(err); });
+            .subscribe(function (data) { _this.edu = data.sort(function (a, b) { return a.order - b.order; }); }, function (err) { return console.log(err); });
     };
     Edu = __decorate([
         core_1.Component({

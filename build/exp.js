@@ -24,7 +24,7 @@ var Exp = (function () {
         // Get Exp data from server
         this.http.get(this.expUrl)
             .map(function (res) { return res.json(); })
-            .subscribe(function (data) { _this.exp = data; }, function (err) { return console.error(err); });
+            .subscribe(function (data) { _this.exp = data.sort(function (a, b) { return a.order - b.order; }); }, function (err) { return console.log(err); });
     };
     Exp = __decorate([
         core_1.Component({

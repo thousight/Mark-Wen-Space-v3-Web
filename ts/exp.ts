@@ -27,8 +27,8 @@ export class Exp {
     this.http.get(this.expUrl)
              .map((res: Response) => res.json())
              .subscribe(
-               data => { this.exp = data; },
-               err => console.error(err)
+               data => { this.exp = data.sort((a, b) => { return a.order - b.order; }); },
+               err => console.log(err)
              );
   }
 }

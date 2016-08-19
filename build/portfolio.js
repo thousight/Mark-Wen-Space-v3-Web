@@ -14,7 +14,7 @@ var title_1 = require("./components/title");
 var Portfolio = (function () {
     function Portfolio(http) {
         this.http = http;
-        this.titleIcon = "briefcase";
+        this.titleIcon = "folder-open";
         this.titleTitle = "Portfolio";
         this.portfolioUrl = "http://mark-wen-space-v3-server.herokuapp.com/Portfolio";
     }
@@ -23,7 +23,7 @@ var Portfolio = (function () {
         // Get Exp data from server
         this.http.get(this.portfolioUrl)
             .map(function (res) { return res.json(); })
-            .subscribe(function (data) { _this.portfolio = data; }, function (err) { return console.error(err); });
+            .subscribe(function (data) { _this.portfolio = data.sort(function (a, b) { return a.order - b.order; }); }, function (err) { return console.log(err); });
     };
     Portfolio = __decorate([
         core_1.Component({

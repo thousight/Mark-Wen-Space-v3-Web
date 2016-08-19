@@ -13,7 +13,7 @@ import { Title } from "./components/title";
 })
 
 export class Portfolio {
-  private titleIcon = "briefcase";
+  private titleIcon = "folder-open";
   private titleTitle = "Portfolio";
   public portfolio;
   private portfolioUrl = "http://mark-wen-space-v3-server.herokuapp.com/Portfolio";
@@ -25,8 +25,8 @@ export class Portfolio {
     this.http.get(this.portfolioUrl)
              .map((res: Response) => res.json())
              .subscribe(
-               data => { this.portfolio = data; },
-               err => console.error(err)
+               data => { this.portfolio = data.sort((a, b) => { return a.order - b.order; }); },
+               err => console.log(err)
              );
   }
 }

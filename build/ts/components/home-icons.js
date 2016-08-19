@@ -21,7 +21,7 @@ var HomeIcons = (function () {
         // Get Links data from server
         this.http.get(this.linksUrl)
             .map(function (res) { return res.json(); })
-            .subscribe(function (data) { _this.links = data; }, function (err) { return console.error(err); });
+            .subscribe(function (data) { _this.links = data; }, function (err) { return console.log(err); });
     };
     HomeIcons = __decorate([
         core_1.Component({

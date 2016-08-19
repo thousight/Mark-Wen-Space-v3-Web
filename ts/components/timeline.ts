@@ -17,12 +17,14 @@ import { Component, Input } from "@angular/core";
                             <img class="timeline-card-image activator" src="../../{{data.image}}" >
                           </div>
                           <div class="timeline-card-content card-content">
-                            <span class="card-title grey-text text-darken-4" style="line-height: 25px">{{data.organization}}</span>
+                            <span class="card-title grey-text text-darken-4" style="line-height: 25px">{{data.organization || data.title}}</span>
                             <p class="timeline-data-location grey-text text-darken-1" style="margin-top: 5px">{{data.city}}, {{data.state}}</p>
-                            <p style="margin-top: 5px">{{data.title}}</p>
+                            <p style="margin-top: 5px">{{data.degree}}</p>
+                            <p style="margin-top: 5px">{{data.others}}</p>
+                            <p style="margin-top: 5px" *ngIf="data.GPA">GPA: {{data.GPA}}</p>
                             <p style="margin-top: 5px">{{data.time}}</p>
                           </div>
-                          <div class="card-reveal">
+                          <div class="card-reveal" *ngIf="data.desc">
                             <i class="timeline-reveal-close material-icons card-title">close</i>
                             <div class="timeline-desc">
                               <span class="timeline-card-title card-title" style="line-height: 25px">{{data.organization}}</span>
@@ -31,7 +33,7 @@ import { Component, Input } from "@angular/core";
                               </ul>
                             </div>
                           </div>
-                          <i class="timeline-more-button material-icons activator">more_vert</i>
+                          <i class="timeline-more-button material-icons activator" *ngIf="data.desc">more_vert</i>
                         </div>
                       </div>
                     </div>

@@ -15,7 +15,7 @@ import { Timeline } from "./components/timeline";
 })
 
 export class Edu {
-  private titleIcon = "briefcase";
+  private titleIcon = "graduation-cap";
   private titleTitle = "Education";
   public edu;
   private eduUrl = "http://mark-wen-space-v3-server.herokuapp.com/Edu";
@@ -27,8 +27,8 @@ export class Edu {
     this.http.get(this.eduUrl)
              .map((res: Response) => res.json())
              .subscribe(
-               data => { this.edu = data; },
-               err => console.error(err)
+               data => { this.edu = data.sort((a, b) => { return a.order - b.order; }); },
+               err => console.log(err)
              );
   }
 }

@@ -31,7 +31,7 @@ export class HomeIcons {
              .map((res: Response) => res.json())
              .subscribe(
                data => { this.links = data; },
-               err => console.error(err)
+               err => console.log(err)
              );
   }
 }
