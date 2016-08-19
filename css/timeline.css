@@ -4,13 +4,14 @@
 /** ******************************* Timeline ******************************* **/
 .Timeline {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
+  position: relative;
 }
 .grayLine {
   width: 3px;
   height: 75%;
   background: #bdbdbd;
-  margin: 75px 50%;
+  margin: 50px 50%;
   position: absolute;
   border-radius: 25px;
 }
@@ -54,9 +55,6 @@
 }
 .timeline-card-image {
   width: 30%;
-}
-.timeline-content {
-  padding-top: 30px;
 }
 .timeline-card-content {
   display: block;
