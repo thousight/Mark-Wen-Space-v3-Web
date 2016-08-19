@@ -14,6 +14,8 @@ var navBar_1 = require("./components/navBar");
 var home_1 = require("./home");
 var about_1 = require("./about");
 var exp_1 = require("./exp");
+var portfolio_1 = require("./portfolio");
+var edu_1 = require("./edu");
 var App = (function () {
     function App() {
         this.hidden = true;
@@ -37,8 +39,8 @@ var App = (function () {
     App = __decorate([
         core_1.Component({
             selector: "app",
-            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home></home>\n              <navBar></navBar>\n              <about></about>\n              <exp></exp>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
-            directives: [onLoad_1.OnLoad, navBar_1.NavBar, home_1.Home, about_1.About, exp_1.Exp]
+            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home></home>\n              <navBar></navBar>\n              <about></about>\n              <exp></exp>\n              <portfolio></portfolio>\n              <edu></edu>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
+            directives: [onLoad_1.OnLoad, navBar_1.NavBar, home_1.Home, about_1.About, exp_1.Exp, portfolio_1.Portfolio, edu_1.Edu]
         }), 
         __metadata('design:paramtypes', [])
     ], App);

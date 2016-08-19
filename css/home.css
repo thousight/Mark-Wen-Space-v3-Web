@@ -3,6 +3,8 @@
 
 /** ********************************* Home ********************************* **/
 .Home {
+  /*Full Screen*/
+  height: 100vh;
   /*Background Image*/
   background: url('../img/home.jpg') center center no-repeat scroll;
   background-size: cover;

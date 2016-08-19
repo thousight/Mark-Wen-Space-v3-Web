@@ -4,11 +4,11 @@
 /** ******************************* Timeline ******************************* **/
 .Timeline {
   width: 100%;
-  margin-top: 70px;
+  margin-top: 20px;
 }
 .grayLine {
   width: 3px;
-  height: 93%;
+  height: 75%;
   background: #bdbdbd;
   margin: 75px 50%;
   position: absolute;

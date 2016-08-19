@@ -13,9 +13,8 @@ declare let $: any;
                     <li><a class="navbar-items" href="#About">About</a></li>
                     <li><a class="navbar-items" href="#Exp">Experience</a></li>
                     <li><a class="navbar-items" href="#Portfolio">Portfolio</a></li>
-                    <li><a class="navbar-items" href="#Education">Education</a></li>
+                    <li><a class="navbar-items" href="#Edu">Education</a></li>
                     <li><a class="navbar-items" href="#Skills">Skills</a></li>
-                    <li><a class="navbar-items" href="#Gallery">Gallery</a></li>
                     <li><a class="navbar-items" href="#Contact">Contact</a></li>
                   </ul>
                   <ul class="side-nav" id="mobile-demo">
@@ -23,9 +22,8 @@ declare let $: any;
                     <li><a class="navbar-items" href="#About">About</a></li>
                     <li><a class="navbar-items" href="#Exp">Experience</a></li>
                     <li><a class="navbar-items" href="#Portfolio">Portfolio</a></li>
-                    <li><a class="navbar-items" href="#Education">Education</a></li>
+                    <li><a class="navbar-items" href="#Edu">Education</a></li>
                     <li><a class="navbar-items" href="#Skills">Skills</a></li>
-                    <li><a class="navbar-items" href="#Gallery">Gallery</a></li>
                     <li><a class="navbar-items" href="#Contact">Contact</a></li>
                   </ul>
                   <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>

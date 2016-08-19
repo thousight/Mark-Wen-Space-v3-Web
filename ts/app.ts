@@ -4,6 +4,8 @@ import { NavBar } from "./components/navBar";
 import { Home } from "./home";
 import { About } from "./about";
 import { Exp } from "./exp";
+import { Portfolio } from "./portfolio";
+import { Edu } from "./edu";
 declare var $: any;
 
 @Component({
@@ -15,12 +17,14 @@ declare var $: any;
               <navBar></navBar>
               <about></about>
               <exp></exp>
+              <portfolio></portfolio>
+              <edu></edu>
             </div>
 
             <!-- List other components here -->
             <onLoad [hidden]="!hidden"></onLoad>
             `,
-  directives: [OnLoad, NavBar, Home, About, Exp]
+  directives: [OnLoad, NavBar, Home, About, Exp, Portfolio, Edu]
 })
 
 export class App {

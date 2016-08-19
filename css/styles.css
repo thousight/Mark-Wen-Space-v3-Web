@@ -2,14 +2,12 @@
 /** ************************************************************************ **/
 
 /** **************** Global & OnLoad & Navbar & Title Setting ************** **/
-/*Full Screen Responsive Div*/
 html, body {
   height: 100%;
   margin: 0;
   background-color: #F5F5F5;
 }
 .content {
-  height: 100%;
   min-height: 100%;
   position: relative;
 }
