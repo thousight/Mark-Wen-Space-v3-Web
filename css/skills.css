@@ -1,0 +1,16 @@
+/** *********************** Mark Wen Space v.3 Web CSS ********************* **/
+/** ************************************************************************ **/
+
+/** ********************************* Skills ******************************* **/
+.skills-card {
+  height: 200px;
+  margin: 0;
+}
+.skills-card-title {
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+.skillsCat-skills > span {
+  font-size: 17px;
+}
