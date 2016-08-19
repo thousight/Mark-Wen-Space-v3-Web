@@ -17,6 +17,7 @@ var about_1 = require("./about");
 var exp_1 = require("./exp");
 var portfolio_1 = require("./portfolio");
 var edu_1 = require("./edu");
+var skills_1 = require("./skills");
 var App = (function () {
     function App(http) {
         this.http = http;
@@ -52,8 +53,8 @@ var App = (function () {
     App = __decorate([
         core_1.Component({
             selector: "app",
-            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home [data]=\"LinksData\"></home>\n              <navBar></navBar>\n              <about></about>\n              <exp [data]=\"ExpData\"></exp>\n              <portfolio [data]=\"PortfolioData\"></portfolio>\n              <edu [data]=\"EduData\"></edu>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
-            directives: [onLoad_1.OnLoad, navBar_1.NavBar, home_1.Home, about_1.About, exp_1.Exp, portfolio_1.Portfolio, edu_1.Edu]
+            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home [data]=\"LinksData\"></home>\n              <navBar></navBar>\n              <about></about>\n              <exp [data]=\"ExpData\"></exp>\n              <!-- <portfolio [data]=\"PortfolioData\"></portfolio> -->\n              <edu [data]=\"EduData\"></edu>\n              <skills [data]=\"SkillsData\"></skills>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
+            directives: [onLoad_1.OnLoad, navBar_1.NavBar, home_1.Home, about_1.About, exp_1.Exp, portfolio_1.Portfolio, edu_1.Edu, skills_1.Skills]
         }), 
         __metadata('design:paramtypes', [http_1.Http])
     ], App);
