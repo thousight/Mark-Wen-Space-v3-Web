@@ -20,6 +20,7 @@ import { Component, Input } from "@angular/core";
                             <span class="card-title grey-text text-darken-4" style="line-height: 25px">{{data.organization || data.title}}</span>
                             <p class="timeline-data-location grey-text text-darken-1" style="margin-top: 5px">{{data.city}}, {{data.state}}</p>
                             <p style="margin-top: 5px">{{data.degree}}</p>
+                            <p style="margin-top: 5px" *ngIf="!data.degree">{{data.title}}</p>
                             <p style="margin-top: 5px">{{data.others}}</p>
                             <p style="margin-top: 5px" *ngIf="data.GPA">GPA: {{data.GPA}}</p>
                             <p style="margin-top: 5px">{{data.time}}</p>
