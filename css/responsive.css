@@ -73,13 +73,13 @@
 /*m*/
 @media screen and (min-width: 601px) and (max-width: 992px) {
   .card .card-content {
-    padding: 20px 30px 30px 30px;
+    padding: 10px 30px 30px 30px;
   }
 }
 
 /*l*/
 @media screen and (min-width: 993px) {
   .card .card-content {
-    padding: 20px 30px 30px 30px;
+    padding: 10px 30px 30px 30px;
   }
 }
