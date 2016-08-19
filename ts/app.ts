@@ -29,10 +29,8 @@ export class App {
 
   ngAfterContentInit() {
     // Initialize Spyscroll
-    $(document).ready(() => {
-      $(".scrollspy").scrollSpy({
-        scrollOffset: 0
-      });
+    $(".scrollspy").scrollSpy({
+      scrollOffset: 0
     });
   }
 
@@ -42,6 +40,6 @@ export class App {
         this.hidden = false; // Dismiss loading screen
         $(".app").fadeIn(1500); // Fading animation
         clearTimeout(this.timeout); // Clear out timeout
-      }, 1000);
+      }, 1500);
   }
 }
