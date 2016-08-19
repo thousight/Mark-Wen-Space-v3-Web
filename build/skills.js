@@ -12,7 +12,7 @@ var core_1 = require("@angular/core");
 var title_1 = require("./components/title");
 var Skills = (function () {
     function Skills() {
-        this.titleIcon = "folder-open";
+        this.titleIcon = "code";
         this.titleTitle = "Skills";
     }
     __decorate([
@@ -22,7 +22,7 @@ var Skills = (function () {
     Skills = __decorate([
         core_1.Component({
             selector: "skills",
-            template: "\n            <div id=\"Skills\" class=\"Skills content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n            </div>\n            ",
+            template: "\n            <div id=\"Skills\" class=\"Skills content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <div class=\"row\">\n                <div class=\"col s12 m12 l8 offset-l2\" *ngFor=\"let skillcat of skills\">\n                  <div class=\"col s12 m6 l4 card-panel blue hoverable\">\n                    <div class=\"card-content white-text\">\n                      <span class=\"card-title\">{{skillcat.skillsCat}}</span>\n                      <div class=\"skillsCat-skills\" *ngFor=\"let skill of skillcat.skill;\">\n                        {{skill.skillName}}: {{skill.percent}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n            ",
             directives: [title_1.Title]
         }), 
         __metadata('design:paramtypes', [])

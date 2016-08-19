@@ -4,7 +4,6 @@
 /** ******************************* Timeline ******************************* **/
 .Timeline {
   width: 100%;
-  margin-top: 50px;
   position: relative;
 }
 .grayLine {
