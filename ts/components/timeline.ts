@@ -13,8 +13,8 @@ import { Component, Input } from "@angular/core";
                           <div class="pointer-circle"></div>
                         </div>
                         <div class="timeline-card card horizontal hoverable">
-                          <div class="card-image waves-effect waves-block waves-light">
-                            <img class="timeline-card-image activator" src="../../{{data.image}}" >
+                          <div class="timeline-card-image card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="../../{{data.image}}" >
                           </div>
                           <div class="timeline-card-content card-content">
                             <span class="card-title grey-text text-darken-4" style="line-height: 25px">{{data.organization || data.title}}</span>
