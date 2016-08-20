@@ -75,11 +75,17 @@
   .card .card-content {
     padding: 10px 30px 30px 30px;
   }
+  .skills-card {
+    height: 430px;
+  }
 }
 
 /*l*/
 @media screen and (min-width: 993px) {
   .card .card-content {
     padding: 10px 30px 30px 30px;
+  }
+  .skills-card {
+    height: 430px;
   }
 }

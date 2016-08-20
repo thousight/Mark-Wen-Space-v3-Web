@@ -1,5 +1,4 @@
 import { Component, Input } from "@angular/core";
-import { Http, Response } from "@angular/http";
 import { Title } from "./components/title";
 
 @Component({
@@ -11,11 +10,15 @@ import { Title } from "./components/title";
                 <div class="col s12 m12 l8 offset-l2">
                   <div class="col s12 m6 l4 skills-card card-panel blue hoverable" *ngFor="let skillcat of skills">
                     <div class="card-content white-text">
-                      <div class="skills-card-title card-title">{{skillcat.skillsCat}}</div>
-                      <div class="skillsCat-skills" *ngFor="let skill of skillcat.skill;">
-                        <span>{{skill.skillName}}: </span>
-                        <div class="progress">
-                          <div class="determinate" style="width: {{skill.percent}}%"></div>
+                      <div class="skills-card-title">
+                        <div class="card-title">{{skillcat.skillsCat}}</div>
+                      </div>
+                      <div class="skills-content">
+                        <div class="skillsCat-skills" *ngFor="let skill of skillcat.skill;">
+                          <span>{{skill.skillName}}: </span>
+                          <div class="skill-progress progress">
+                            <div class="determinate" style="width: {{skill.percent}}%"></div>
+                          </div>
                         </div>
                       </div>
                     </div>

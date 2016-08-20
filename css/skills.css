@@ -3,8 +3,11 @@
 
 /** ********************************* Skills ******************************* **/
 .skills-card {
-  height: 200px;
   margin: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
 }
 .skills-card-title {
   font-size: 20px;
@@ -12,5 +15,8 @@
   text-align: center;
 }
 .skillsCat-skills > span {
-  font-size: 17px;
+  font-size: 15px;
+}
+.skill-progress {
+
 }

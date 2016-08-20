@@ -1,5 +1,4 @@
 import { Component, Input } from "@angular/core";
-import { Http, Response } from "@angular/http";
 import { Title } from "./components/title";
 
 @Component({
