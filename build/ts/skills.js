@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var common_1 = require('@angular/common');
 var title_1 = require("./components/title");
 var Skills = (function () {
     function Skills() {
@@ -22,8 +23,8 @@ var Skills = (function () {
     Skills = __decorate([
         core_1.Component({
             selector: "skills",
-            template: "\n            <div id=\"Skills\" class=\"Skills content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <div class=\"row\">\n                <div class=\"col s12 m12 l8 offset-l2\">\n                  <div class=\"col s12 m6 l4 skills-card card-panel blue hoverable\" *ngFor=\"let skillcat of skills\">\n                    <div class=\"card-content white-text\">\n                      <div class=\"skills-card-title\">\n                        <div class=\"card-title\">{{skillcat.skillsCat}}</div>\n                      </div>\n                      <div class=\"skills-content\">\n                        <div class=\"skillsCat-skills\" *ngFor=\"let skill of skillcat.skill;\">\n                          <span>{{skill.skillName}}: </span>\n                          <div class=\"skill-progress progress\">\n                            <div class=\"determinate\" style=\"width: {{skill.percent}}%\"></div>\n                          </div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n            ",
-            directives: [title_1.Title]
+            template: "\n            <div id=\"Skills\" class=\"Skills content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <div class=\"row\">\n                <div class=\"col s12 m12 l8 offset-l2\">\n                  <div class=\"col s12 m6 l4 skills-card card-panel blue hoverable\" *ngFor=\"let skillcat of skills\">\n                    <div class=\"card-content white-text\">\n                      <div class=\"skills-card-title\">\n                        <div class=\"card-title\">{{skillcat.skillsCat}}</div>\n                      </div>\n                      <div class=\"skills-content\">\n                        <div class=\"skillsCat-skills\" *ngFor=\"let skill of skillcat.skill;\">\n                          <span>{{skill.skillName}}: </span>\n                          <div class=\"skill-progress progress\">\n                            <div class=\"determinate\" [ngStyle]=\"{'width': skill.percent + '%'}\"></div>\n                          </div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n            ",
+            directives: [common_1.NgStyle, title_1.Title]
         }), 
         __metadata('design:paramtypes', [])
     ], Skills);

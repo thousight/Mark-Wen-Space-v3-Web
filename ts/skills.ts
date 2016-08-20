@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { NgStyle } from '@angular/common';
 import { Title } from "./components/title";
 
 @Component({
@@ -17,7 +18,7 @@ import { Title } from "./components/title";
                         <div class="skillsCat-skills" *ngFor="let skill of skillcat.skill;">
                           <span>{{skill.skillName}}: </span>
                           <div class="skill-progress progress">
-                            <div class="determinate" style="width: {{skill.percent}}%"></div>
+                            <div class="determinate" [ngStyle]="{'width': skill.percent + '%'}"></div>
                           </div>
                         </div>
                       </div>
@@ -27,7 +28,7 @@ import { Title } from "./components/title";
               </div>
             </div>
             `,
-  directives: [Title]
+  directives: [NgStyle, Title]
 })
 
 export class Skills {
