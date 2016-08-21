@@ -6,6 +6,43 @@ import { Title } from "./components/title";
   template: `
             <div id="Contact" class="Contact content section scrollspy">
               <title [icon]="titleIcon" [title]="titleTitle"></title>
+              <div class="contact-content">
+                <div class="row">
+                  <div class="col s12 m12 l8 offset-l2">
+                    <div class="col s12 m6 l5">
+                      <div class="card blue">
+                        <div class="contact-info-card card-content white-text">
+                          <span class="card-title">Get In Touch</span>
+                          <div class="contact-info">
+                            <div class="contact-info-icons">
+                              <i class="fa fa-phone" aria-hidden="true"></i><br>
+                              <i class="fa fa-envelope-o" aria-hidden="true"></i><br>
+                              <i class="fa fa-map-marker" aria-hidden="true"></i><br>
+                            </div>
+                            <div class="contact-info-texts">
+                              (510) 505-4398<br>
+                              markwenguojie94@gmail.com<br>
+                              2120 McCormick Rd<br>Rm 721<br>West Lafayette, IN 47906
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m6 l7">
+                      <div class="card">
+                        <div class="card-content">
+                          <span class="card-title">Message Me</span>
+                          <form class="message-form">
+                            <div class="input-field col s12">
+                              <input id="email" type="email" class="validate">
+                              <label for="email">Email</label>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
             </div>
             `,
   directives: [Title]

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var common_1 = require('@angular/common');
+var common_1 = require("@angular/common");
 var title_1 = require("./components/title");
 var Skills = (function () {
     function Skills() {
