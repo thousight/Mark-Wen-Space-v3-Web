@@ -17,11 +17,17 @@
 .skillsCat-skills > span {
   font-size: 15px;
 }
+.skillsCat-skills {
+  width: 95%;
+  margin: 0 auto;
+}
 .skill-progress {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.2);
-  width: 80%;
+  width: 85%;
 }
 .skill-number {
   margin-top: -3.5vh;
+  width: 15%;
+  text-align: right;
 }

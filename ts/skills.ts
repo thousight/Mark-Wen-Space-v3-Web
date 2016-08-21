@@ -16,7 +16,7 @@ import { Title } from "./components/title";
                       </div>
                       <div class="skills-content">
                         <div class="skillsCat-skills" *ngFor="let skill of skillcat.skill;">
-                          <span>{{skill.skillName}}: </span>
+                          <span>{{skill.skillName}} </span>
                           <div class="skill-percent">
                             <div class="progress skill-progress">
                               <div class="determinate white" [ngStyle]="{'width': skill.percent + '%'}"></div>
