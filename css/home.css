@@ -11,7 +11,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0 ,0 ,0 , 0.08);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.08);
   /*Vertically center all items*/
   display: flex;
   vertical-align: middle;

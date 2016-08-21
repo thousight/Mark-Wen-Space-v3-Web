@@ -8,6 +8,7 @@ import { Exp } from "./exp";
 import { Portfolio } from "./portfolio";
 import { Edu } from "./edu";
 import { Skills } from "./skills";
+import { Contact } from "./contact";
 declare var $: any;
 
 @Component({
@@ -22,12 +23,23 @@ declare var $: any;
               <!-- <portfolio [data]="PortfolioData"></portfolio> -->
               <edu [data]="EduData"></edu>
               <skills [data]="SkillsData"></skills>
+              <div class="parallax-container">
+                <div class="parallax"><img src="../img/parallax.jpg"></div>
+                <div class="parallax-text">
+                  "Love is patient, love is kind. It does not envy, it does not boast, it is not proud.
+                  It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs.
+                  Love does not delight in evil but rejoices with the truth.
+                  It always protects, always trusts, always hopes, always perseveres."
+                  <div>--NIV, 1 Corithians 13: 4~7</div>
+                </div>
+              </div>
+              <contact></contact>
             </div>
 
             <!-- List other components here -->
             <onLoad [hidden]="!hidden"></onLoad>
             `,
-  directives: [OnLoad, NavBar, Home, About, Exp, Portfolio, Edu, Skills]
+  directives: [OnLoad, NavBar, Home, About, Exp, Portfolio, Edu, Skills, Contact]
 })
 
 export class App {
@@ -69,5 +81,7 @@ export class App {
     $(".scrollspy").scrollSpy({
       scrollOffset: 0
     });
+    // Initialize Parallax
+    $(".parallax").parallax();
   }
 }

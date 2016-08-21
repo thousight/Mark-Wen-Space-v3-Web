@@ -76,3 +76,13 @@ title {
 .titleIcon {
   text-decoration: underline;
 }
+.parallax-text {
+  color: white;
+  text-align: center;
+  height: 100%;
+  font-size: 27px;
+  margin: 20% 30px;
+}
+.parallax-text > div {
+  text-align: right;
+}
