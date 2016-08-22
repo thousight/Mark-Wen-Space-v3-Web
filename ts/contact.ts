@@ -11,7 +11,7 @@ import { Title } from "./components/title";
                   <div class="col s12 m12 l8 offset-l2">
                     <div class="col s12 m6 l6">
                       <!-- Contact Info Card -->
-                      <div class="contact-card card blue">
+                      <div class="card blue">
                         <div class="contact-info-card card-content white-text">
                           <span class="card-title">Get In Touch</span>
                           <div class="contact-info">
