@@ -9,8 +9,9 @@ import { Title } from "./components/title";
               <div class="contact-content">
                 <div class="row">
                   <div class="col s12 m12 l8 offset-l2">
-                    <div class="col s12 m6 l5">
-                      <div class="card blue">
+                    <div class="col s12 m6 l6">
+                      <!-- Contact Info Card -->
+                      <div class="contact-card card blue">
                         <div class="contact-info-card card-content white-text">
                           <span class="card-title">Get In Touch</span>
                           <div class="contact-info">
@@ -20,23 +21,36 @@ import { Title } from "./components/title";
                               <i class="fa fa-map-marker" aria-hidden="true"></i><br>
                             </div>
                             <div class="contact-info-texts">
-                              (510) 505-4398<br>
-                              markwenguojie94@gmail.com<br>
-                              2120 McCormick Rd<br>Rm 721<br>West Lafayette, IN 47906
+                              <div>(510) 505-4398</div>
+                              <div>markwenguojie94@gmail.com</div>
+                              <div style="line-height: 25px">2120 McCormick Rd<br>Rm 721<br>West Lafayette, IN 47906</div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col s12 m6 l7">
-                      <div class="card">
+                    <!-- Message Card -->
+                    <div class="col s12 m6 l6">
+                      <div class="contact-card card">
                         <div class="card-content">
                           <span class="card-title">Message Me</span>
                           <form class="message-form">
                             <div class="input-field col s12">
-                              <input id="email" type="email" class="validate">
+                              <input type="text" class="validate">
+                              <label for="name">Name</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input type="email" class="validate">
                               <label for="email">Email</label>
                             </div>
+                            <div class="input-field col s12">
+                              <textarea id="message" class="materialize-textarea"></textarea>
+                              <label for="textarea1">Message</label>
+                            </div>
+                            <button class="btn waves-effect waves-light blue" type="submit" name="action">
+                              Submit
+                              <i class="material-icons right">send</i>
+                            </button>
                           </form>
                         </div>
                       </div>
