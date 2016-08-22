@@ -55,7 +55,15 @@ import { Title } from "./components/title";
                         </div>
                       </div>
                     </div>
+                    <!-- Google Maps Card -->
+                    <div class="col s12 m12 l12">
+                      <div id="GoogleMap" class="GoogleMap"></div>
+                      <script>
+
+                      </script>
+                    </div>
                   </div>
+                </div>
               </div>
             </div>
             `,
@@ -65,4 +73,15 @@ import { Title } from "./components/title";
 export class Contact {
   private titleIcon = "envelope";
   private titleTitle = "Contact";
+
+  ngOnViewInit() {
+    let map;
+    window.initMap = () => {
+      map = new google.maps.Map(document.getElementById('GoogleMap'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+      });
+      console.log('maps')
+    }
+  }
 }
