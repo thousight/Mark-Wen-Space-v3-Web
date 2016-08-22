@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Title } from "./components/title";
+import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS, SebmGoogleMap, SebmGoogleMapMarker } from "angular2-google-maps/core/index";
 
 @Component({
   selector: "contact",
@@ -57,31 +58,48 @@ import { Title } from "./components/title";
                     </div>
                     <!-- Google Maps Card -->
                     <div class="col s12 m12 l12">
-                      <div id="GoogleMap" class="GoogleMap"></div>
-                      <script>
-
-                      </script>
+                      <sebm-google-map
+                        #GoogleMap
+                        class="GoogleMap"
+                        [latitude]="initLat"
+                        [longitude]="initLng"
+                        [zoom]="zoom"
+                        [scrollwheel]="scrollwheel"
+                        [mapDraggable]="mapDraggable">
+                        <sebm-google-map-marker [latitude]="lat" [longitude]="lng" [label]="">
+                        </sebm-google-map-marker>
+                      </sebm-google-map>
+                      <button
+                      id="GoogleMapHiddenButton"
+                      (click)="showMap = true; GoogleMap.triggerResize()"
+                      style="visibility: hidden">resize</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             `,
-  directives: [Title]
+  directives: [Title, GOOGLE_MAPS_DIRECTIVES]
 })
 
 export class Contact {
+  // Title Data
   private titleIcon = "envelope";
   private titleTitle = "Contact";
 
-  ngOnViewInit() {
-    let map;
-    window.initMap = () => {
-      map = new google.maps.Map(document.getElementById('GoogleMap'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-      });
-      console.log('maps')
-    }
-  }
+  // Google Maps Data
+  initLat: number = 40.4533961;
+  initLng: number = -86.9616737;
+  lat: number = 40.4493099;
+	lng: number = -86.9465341;
+  zoom: number = 16;
+  scrollwheel: boolean = false;
+  mapDraggable: boolean = true;
+  // 
+  // constructor(private _wrapper: GoogleMapsAPIWrapper) {
+  //   this._wrapper.getMap().then((m) => {
+  //     // m.setCenter(new m.LatLng(40.4533961, -86.9616737))
+  //     console.log(m)
+  //   }
+  // }
 }

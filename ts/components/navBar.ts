@@ -85,6 +85,9 @@ export class NavBar {
         $(".NavBarNav").removeClass("blue");
         $(".nav-wrapper").css({"margin-top": -1 * $(".NavBar").height()});
       }
+
+      // Super sketchy way to work around the GoogleMap showing bug
+      $("#GoogleMapHiddenButton").trigger("click");
     });
   }
 }
