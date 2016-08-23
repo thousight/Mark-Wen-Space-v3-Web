@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { Title } from "./components/title";
 import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS, SebmGoogleMap, SebmGoogleMapMarker } from "angular2-google-maps/core/index";
 import { GoogleMapsAPIWrapper } from "angular2-google-maps/core/services/google-maps-api-wrapper";
+import { LatLng } from "angular2-google-maps/core/services/google-maps-types";
 
 @Component({
   selector: "contact",
@@ -80,7 +81,8 @@ import { GoogleMapsAPIWrapper } from "angular2-google-maps/core/services/google-
               </div>
             </div>
             `,
-  directives: [Title, GOOGLE_MAPS_DIRECTIVES]
+  directives: [Title, GOOGLE_MAPS_DIRECTIVES]，
+  providers: [GoogleMapsAPIWrapper]
 })
 
 export class Contact {
@@ -98,9 +100,13 @@ export class Contact {
   mapDraggable: boolean = true;
 
   constructor(private _wrapper: GoogleMapsAPIWrapper) {
+
+  }
+
+  ngOnInit() {
     this._wrapper.getNativeMap().then((m) => {
-      // m.setCenter(new m.LatLng(40.4533961, -86.9616737))
-      console.log(m);
+      console.log("map: " + m);
+      m.setCenter(new LatLng(40.4533961, -86.9616737))
     });
   }
 }
