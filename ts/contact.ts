@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Title } from "./components/title";
 import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS, SebmGoogleMap, SebmGoogleMapMarker } from "angular2-google-maps/core/index";
+import { GoogleMapsAPIWrapper } from "angular2-google-maps/core/services/google-maps-api-wrapper";
 
 @Component({
   selector: "contact",
@@ -91,15 +92,15 @@ export class Contact {
   initLat: number = 40.4533961;
   initLng: number = -86.9616737;
   lat: number = 40.4493099;
-	lng: number = -86.9465341;
+  lng: number = -86.9465341;
   zoom: number = 16;
   scrollwheel: boolean = false;
   mapDraggable: boolean = true;
-  // 
-  // constructor(private _wrapper: GoogleMapsAPIWrapper) {
-  //   this._wrapper.getMap().then((m) => {
-  //     // m.setCenter(new m.LatLng(40.4533961, -86.9616737))
-  //     console.log(m)
-  //   }
-  // }
+
+  constructor(private _wrapper: GoogleMapsAPIWrapper) {
+    this._wrapper.getNativeMap().then((m) => {
+      // m.setCenter(new m.LatLng(40.4533961, -86.9616737))
+      console.log(m);
+    });
+  }
 }
