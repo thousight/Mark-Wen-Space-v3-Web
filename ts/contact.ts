@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 import { Title } from "./components/title";
 import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS, SebmGoogleMap, SebmGoogleMapMarker } from "angular2-google-maps/core/index";
 import { GoogleMapsAPIWrapper } from "angular2-google-maps/core/services/google-maps-api-wrapper";
-import { LatLng } from "angular2-google-maps/core/services/google-maps-types";
+import { LatLngLiteral } from "angular2-google-maps/core/services/google-maps-types";
+declare var center: LatLngLiteral;
 
 @Component({
   selector: "contact",
@@ -81,7 +82,7 @@ import { LatLng } from "angular2-google-maps/core/services/google-maps-types";
               </div>
             </div>
             `,
-  directives: [Title, GOOGLE_MAPS_DIRECTIVES]，
+  directives: [Title, GOOGLE_MAPS_DIRECTIVES],
   providers: [GoogleMapsAPIWrapper]
 })
 
@@ -98,15 +99,18 @@ export class Contact {
   zoom: number = 16;
   scrollwheel: boolean = false;
   mapDraggable: boolean = true;
+  private center: LatLngLiteral = {
+    lat: 40.4493099,
+    lng: -86.9465341
+  };
 
-  constructor(private _wrapper: GoogleMapsAPIWrapper) {
-
-  }
+  constructor(private _wrapper: GoogleMapsAPIWrapper) { }
 
   ngOnInit() {
+    console.log(this._wrapper.setCenter(this.center))
     this._wrapper.getNativeMap().then((m) => {
       console.log("map: " + m);
-      m.setCenter(new LatLng(40.4533961, -86.9616737))
+      m.setCenter(this.center)
     });
   }
 }

@@ -26,11 +26,17 @@ var Contact = (function () {
         this.zoom = 16;
         this.scrollwheel = false;
         this.mapDraggable = true;
+        this.center = {
+            lat: 40.4493099,
+            lng: -86.9465341
+        };
     }
     Contact.prototype.ngOnInit = function () {
+        var _this = this;
+        console.log(this._wrapper.setCenter(this.center));
         this._wrapper.getNativeMap().then(function (m) {
             console.log("map: " + m);
-            m.setCenter(new LatLng(40.4533961, -86.9616737));
+            m.setCenter(_this.center);
         });
     };
     Contact = __decorate([
