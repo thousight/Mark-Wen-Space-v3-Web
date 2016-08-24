@@ -1,8 +1,6 @@
 import { Component } from "@angular/core";
 import { Title } from "./components/title";
-import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS, SebmGoogleMap, SebmGoogleMapMarker } from "angular2-google-maps/core/index";
-import { GoogleMapsAPIWrapper } from "angular2-google-maps/core/services/google-maps-api-wrapper";
-import { LatLngLiteral } from "angular2-google-maps/core/services/google-maps-types";
+import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS, SebmGoogleMap, SebmGoogleMapMarker, LatLngLiteral, GoogleMapsAPIWrapper } from "angular2-google-maps/core/index";
 declare var center: LatLngLiteral;
 
 @Component({
@@ -74,7 +72,7 @@ declare var center: LatLngLiteral;
                       </sebm-google-map>
                       <button
                       id="GoogleMapHiddenButton"
-                      (click)="showMap = true; GoogleMap.triggerResize()"
+                      (click)="GoogleMap.triggerResize()"
                       style="visibility: hidden">resize</button>
                     </div>
                   </div>
@@ -92,11 +90,11 @@ export class Contact {
   private titleTitle = "Contact";
 
   // Google Maps Data
-  initLat: number = 40.4533961;
-  initLng: number = -86.9616737;
-  lat: number = 40.4493099;
-  lng: number = -86.9465341;
-  zoom: number = 16;
+  initLat: number = 40.45132;
+  initLng: number = -86.9451292;
+  lat: number = 40.4504718;
+  lng: number = -86.9440625;
+  zoom: number = 18;
   scrollwheel: boolean = false;
   mapDraggable: boolean = true;
   private center: LatLngLiteral = {
@@ -106,11 +104,11 @@ export class Contact {
 
   constructor(private _wrapper: GoogleMapsAPIWrapper) { }
 
-  ngOnInit() {
-    console.log(this._wrapper.setCenter(this.center))
-    this._wrapper.getNativeMap().then((m) => {
-      console.log("map: " + m);
-      m.setCenter(this.center)
-    });
+  ngAfterContentInit() {
+    // console.log(this._wrapper.getNativeMap())
+    // this._wrapper.getNativeMap().then((m) => {
+    //   console.log(m);
+    //   m.setCenter(this.center);
+    // });
   }
 }
