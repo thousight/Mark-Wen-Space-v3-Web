@@ -36,17 +36,25 @@ declare var center: LatLngLiteral;
                       <div class="contact-card card">
                         <div class="card-content">
                           <span class="card-title">Message Me</span>
-                          <form class="message-form">
+                          <form #messageForm="ngForm" class="message-form" action="mailto:markwenguojie94@gmail.com?cc=" method="post" enctype="text/plain">
                             <div class="input-field col s12">
-                              <input type="text" class="validate">
+                              <input type="text" class="validate" ngControl="name" required [(NgModel)]="email.name">
                               <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                              <input type="email" class="validate">
-                              <label for="email">Email</label>
+                              <input type="email" class="validate" ngControl="cc" [(NgModel)]="email.CC">
+                              <label for="email">CC</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="message" class="materialize-textarea"></textarea>
+                              <input type="email" class="validate" ngControl="bcc" [(NgModel)]="email.BCC">
+                              <label for="email">BCC</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <input type="text" class="validate" ngControl="subject" required [(NgModel)]="email.subject">
+                              <label for="name">Subject</label>
+                            </div>
+                            <div class="input-field col s12">
+                              <textarea id="message" class="materialize-textarea" ngControl="message" required [(NgModel)]="email.message"></textarea>
                               <label for="textarea1">Message</label>
                             </div>
                             <button class="btn waves-effect waves-light blue" type="submit" name="action">
@@ -100,6 +108,13 @@ export class Contact {
   private center: LatLngLiteral = {
     lat: 40.4493099,
     lng: -86.9465341
+  };
+  email = {
+    name: "meh",
+    CC: "",
+    BCC: "",
+    subject: "",
+    message: ""
   };
 
   constructor(private _wrapper: GoogleMapsAPIWrapper) { }

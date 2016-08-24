@@ -7,7 +7,7 @@ This new version has the following upgrades from the previous version:
 - Following Material design guidelines
 - Cleaner overall design than last version
 - Uses Angular2 framework
-- More to be added when I remember...
+- More to be added when I remember them...
 
 ## Known Bugs
 There are some bugs that I know they exist, but for some reason I'm not able to fix them, and they are listed below with reasons:
