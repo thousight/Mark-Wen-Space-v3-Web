@@ -36,7 +36,7 @@ declare var center: LatLngLiteral;
                       <div class="contact-card card">
                         <div class="card-content">
                           <span class="card-title">Message Me</span>
-                          <form #messageForm="ngForm" class="message-form" action="mailto:markwenguojie94@gmail.com?cc=" method="post" enctype="text/plain">
+                          <form class="message-form" action="mailto:markwenguojie94@gmail.com?cc=" method="post" enctype="text/plain">
                             <div class="input-field col s12">
                               <input type="text" class="validate" ngControl="name" required [(NgModel)]="email.name">
                               <label for="name">Name</label>
