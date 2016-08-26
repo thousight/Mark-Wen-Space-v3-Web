@@ -9,6 +9,7 @@ import { Portfolio } from "./portfolio";
 import { Edu } from "./edu";
 import { Skills } from "./skills";
 import { Contact } from "./contact";
+import { MWFooter } from "./footer";
 declare var $: any;
 
 @Component({
@@ -34,12 +35,13 @@ declare var $: any;
                 </div>
               </div>
               <contact></contact>
+              <mwFooter></mwFooter>
             </div>
 
             <!-- List other components here -->
             <onLoad [hidden]="!hidden"></onLoad>
             `,
-  directives: [OnLoad, NavBar, Home, About, Exp, Portfolio, Edu, Skills, Contact]
+  directives: [OnLoad, NavBar, Home, About, Exp, Portfolio, Edu, Skills, Contact, MWFooter]
 })
 
 export class App {

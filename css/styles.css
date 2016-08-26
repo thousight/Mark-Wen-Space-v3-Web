@@ -1,7 +1,7 @@
 /** *********************** Mark Wen Space v.3 Web CSS ********************* **/
 /** ************************************************************************ **/
 
-/** **************** Global & OnLoad & Navbar & Title Setting ************** **/
+/** *********** Global & OnLoad & Navbar & Title & Footer Setting ********** **/
 html, body {
   height: 100%;
   margin: 0;
@@ -85,4 +85,11 @@ title {
 }
 .parallax-text > div {
   text-align: right;
+}
+/*Footer*/
+.footer-subtitle {
+  margin-top: 20px;
+}
+.footer-list > div > ul {
+  margin-top: 0;
 }
