@@ -38,23 +38,15 @@ declare var center: LatLngLiteral;
                           <span class="card-title">Message Me</span>
                           <form class="message-form" action="mailto:markwenguojie94@gmail.com?cc=" method="post" enctype="text/plain">
                             <div class="input-field col s12">
-                              <input type="text" class="validate" ngControl="name" required [(NgModel)]="email.name">
+                              <input type="text" class="validate" name="name" required>
                               <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                              <input type="email" class="validate" ngControl="cc" [(NgModel)]="email.CC">
-                              <label for="email">CC</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <input type="email" class="validate" ngControl="bcc" [(NgModel)]="email.BCC">
-                              <label for="email">BCC</label>
-                            </div>
-                            <div class="input-field col s12">
-                              <input type="text" class="validate" ngControl="subject" required [(NgModel)]="email.subject">
+                              <input type="text" class="validate" name="subject" required>
                               <label for="name">Subject</label>
                             </div>
                             <div class="input-field col s12">
-                              <textarea id="message" class="materialize-textarea" ngControl="message" required [(NgModel)]="email.message"></textarea>
+                              <textarea id="message" class="materialize-textarea" name="message" required></textarea>
                               <label for="textarea1">Message</label>
                             </div>
                             <button class="btn waves-effect waves-light blue" type="submit" name="action">
@@ -109,21 +101,14 @@ export class Contact {
     lat: 40.4493099,
     lng: -86.9465341
   };
-  email = {
-    name: "meh",
-    CC: "",
-    BCC: "",
-    subject: "",
-    message: ""
-  };
 
   constructor(private _wrapper: GoogleMapsAPIWrapper) { }
 
   ngAfterContentInit() {
-    // console.log(this._wrapper.getNativeMap())
-    // this._wrapper.getNativeMap().then((m) => {
-    //   console.log(m);
-    //   m.setCenter(this.center);
-    // });
+    $("form").submit(e => {
+      e.preventDefault();
+      let formData = $("form").serializeArray();
+      window.open("mailto:markwenguojie94@gmail.com?subject=" + formData[0].value + " messages you through MarkWenSpace: " + formData[1].value + "&body=" + formData[2].value);
+    });
   }
 }

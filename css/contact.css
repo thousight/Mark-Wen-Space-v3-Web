@@ -2,9 +2,6 @@
 /** ************************************************************************ **/
 
 /** ******************************** Contact ******************************* **/
-.contact-card {
-  height: 402px;
-}
 .contact-info {
   display: inline-flex;
 }
@@ -67,7 +64,6 @@
  .message-form > button {
    margin: 0 0.75rem;
    position: relative;
-   float: right;
  }
  .GoogleMap {
    height: 500px;
