@@ -11,6 +11,9 @@
     "tsc:w": "tsc -w",
     "typings": "typings"
   },
+  "engines": {
+    "node": "4.1.1"
+  },
   "author": "thousight",
   "license": "ISC",
   "dependencies": {
