@@ -72,6 +72,9 @@
   .card::after {
     display: none;
   }
+  .GoogleMap {
+    height: 350px;
+  }
 }
 
 /*m*/
@@ -81,6 +84,9 @@
   }
   .skills-card {
     height: 430px;
+  }
+  .GoogleMap {
+    height: 400px;
   }
 }
 
