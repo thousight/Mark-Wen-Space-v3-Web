@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "name": "mark-wens-space-v3-web",
   "version": "3.0.3",
@@ -51,5 +52,3 @@
     "devDependencies": {
       "typescript": "npm:typescript@^1.6.2"
     }
-  }
-}
