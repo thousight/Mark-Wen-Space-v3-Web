@@ -72,7 +72,7 @@ export class App {
                      this.hidden = false; // Dismiss loading screen
                      $(".app").fadeIn(1500); // Fading animation
                      clearTimeout(this.timeout); // Clear out timeout
-                   }, 500);
+                   }, 1000);
                 },
                err => console.log(err)
              );
