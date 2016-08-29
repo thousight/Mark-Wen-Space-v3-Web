@@ -21,7 +21,7 @@ declare var $: any;
               <navBar></navBar>
               <about></about>
               <exp [data]="ExpData"></exp>
-              <!-- <portfolio [data]="PortfolioData"></portfolio> -->
+              <portfolio [data]="PortfolioData"></portfolio>
               <edu [data]="EduData"></edu>
               <skills [data]="SkillsData"></skills>
               <div class="parallax-container">

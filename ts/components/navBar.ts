@@ -12,7 +12,7 @@ declare let $: any;
                     <li><a class="navbar-items" href="#Home">Home</a></li>
                     <li><a class="navbar-items" href="#About">About</a></li>
                     <li><a class="navbar-items" href="#Exp">Experience</a></li>
-                    <!-- <li><a class="navbar-items" href="#Portfolio">Portfolio</a></li> -->
+                    <li><a class="navbar-items" href="#Portfolio">Portfolio</a></li>
                     <li><a class="navbar-items" href="#Edu">Education</a></li>
                     <li><a class="navbar-items" href="#Skills">Skills</a></li>
                     <li><a class="navbar-items" href="#Contact">Contact</a></li>
@@ -21,7 +21,7 @@ declare let $: any;
                     <li><a class="navbar-items" href="#Home">Home</a></li>
                     <li><a class="navbar-items" href="#About">About</a></li>
                     <li><a class="navbar-items" href="#Exp">Experience</a></li>
-                    <!-- <li><a class="navbar-items" href="#Portfolio">Portfolio</a></li> -->
+                    <li><a class="navbar-items" href="#Portfolio">Portfolio</a></li>
                     <li><a class="navbar-items" href="#Edu">Education</a></li>
                     <li><a class="navbar-items" href="#Skills">Skills</a></li>
                     <li><a class="navbar-items" href="#Contact">Contact</a></li>
