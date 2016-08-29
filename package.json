@@ -1,6 +1,6 @@
 {
   "name": "mark-wens-space-v3-web",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Web client of my personal website",
   "main": "server.js",
   "scripts": {
