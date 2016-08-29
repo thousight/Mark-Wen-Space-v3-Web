@@ -14,6 +14,8 @@ There are some bugs that I know they exist, but for some reason I'm not able to 
 
 - **Skills box-shadow overlap:** only the last card can show the box-shadow on 4 sides, and I've tried using z-index but it doesn't help.
 - **Google Maps isn't centered at the markup point at start:** The plug-in I use is called [Angular2-Google-Maps](https://https://angular-maps.com/), and for some reason when I initiate the app with the latitude and longitude I want it to center on, that location will be at the top left corner of the map instead. I also tried getting the original google.maps object with the solution mentioned in this [post](https://github.com/SebastianM/angular2-google-maps/issues/139), but both getMap() and getNativeMap() can't get me any map object returned.
+- **Card Reveal isn't functioning properly in iOS Safari:** Materializecss card reveal div opens up but shifted to the right, and it can't close because the close button is shifted as well.
+- **Navbar has a delay when changing to fix on mobile:** In Android, when moving navbar from bottom to top, it doesn't stick to the top until half seconds later. In iOS, navbar shows unless you pull down a bit after it should stick to the top.
 
 Feel free to submit me pull requests if you can help me solve these bugs, it would be greatly appreciated.
 
