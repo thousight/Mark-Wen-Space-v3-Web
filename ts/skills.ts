@@ -39,5 +39,5 @@ import { Title } from "./components/title";
 export class Skills {
   private titleIcon = "code";
   private titleTitle = "Skills";
-  @Input("data") skills: Array<Object>;
+  @Input("SkillsData") skills: Array<Object>;
 }

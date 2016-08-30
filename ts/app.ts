@@ -17,13 +17,13 @@ declare var $: any;
   template: `
             <!-- List all the main components inside div -->
             <div class="app content" [hidden]="hidden">
-              <home [data]="LinksData"></home>
+              <home [LinksData]="LinksData"></home>
               <navBar></navBar>
               <about></about>
-              <exp [data]="ExpData"></exp>
-              <!-- <portfolio [data]="PortfolioData"></portfolio> -->
-              <edu [data]="EduData"></edu>
-              <skills [data]="SkillsData"></skills>
+              <exp [ExpData]="ExpData"></exp>
+              <!-- <portfolio [PortfolioData]="PortfolioData"></portfolio> -->
+              <edu [EduData]="EduData"></edu>
+              <skills [SkillsData]="SkillsData"></skills>
               <div class="parallax-container">
                 <div class="parallax"><img src="../img/parallax.jpg"></div>
                 <div class="parallax-text">

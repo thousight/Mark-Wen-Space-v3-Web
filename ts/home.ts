@@ -8,7 +8,7 @@ import { HomeIcons } from "./components/home-icons";
               <div class="home-content-wrapper">
                 <h1 class="home-title no-select">Mark Wen</h1>
                 <h3 class="home-subtitle no-select">Web and Mobile Developer</h3>
-                <home-icons [data]="links"></home-icons>
+                <home-icons [links]="links"></home-icons>
               </div>
             </div>
             `,
@@ -16,5 +16,5 @@ import { HomeIcons } from "./components/home-icons";
 })
 
 export class Home {
-  @Input("data") links: Array<Object>;
+  @Input("LinksData") links: Array<Object>;
 }

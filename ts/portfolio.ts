@@ -14,5 +14,5 @@ import { Title } from "./components/title";
 export class Portfolio {
   private titleIcon = "folder-open";
   private titleTitle = "Portfolio";
-  @Input("data") portfolio: Array<Object>;
+  @Input("PortfolioData") portfolio: Array<Object>;
 }
