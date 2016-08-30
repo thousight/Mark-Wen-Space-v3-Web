@@ -14,7 +14,7 @@ app.use(morgan('dev'));
 // Compress everything to speedup
 app.use(compression({threshold: 0}));
 // Minify and cache everything
-app.use(minify());
+// app.use(minify());
 // Configure app to use bodyParser(), which will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 // Parse application/json
