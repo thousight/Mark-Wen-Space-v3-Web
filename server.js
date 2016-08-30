@@ -28,8 +28,6 @@ app.get('/*', (req, res, next) => {
 // Get local files
 process.env.PWD = process.cwd();
 app.use(express.static(process.env.PWD + '/'));
-// use compression to zip the files
-app.use(compression());
 
 /** **************************** Server Running **************************** **/
 var port = process.env.PORT || 3000;
