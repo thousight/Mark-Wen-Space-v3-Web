@@ -47,5 +47,5 @@ import { Component, Input } from "@angular/core";
 export class Timeline {
   @Input("icon") icon: string;
   @Input("title") title: string;
-  @Input() data: Array<Object>;
+  @Input("data") data: Array<Object>;
 }

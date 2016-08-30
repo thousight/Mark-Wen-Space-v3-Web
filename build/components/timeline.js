@@ -21,7 +21,7 @@ var Timeline = (function () {
         __metadata('design:type', String)
     ], Timeline.prototype, "title", void 0);
     __decorate([
-        core_1.Input(), 
+        core_1.Input("data"), 
         __metadata('design:type', Array)
     ], Timeline.prototype, "data", void 0);
     Timeline = __decorate([
