@@ -43,7 +43,7 @@ var App = (function () {
                 _this.hidden = false; // Dismiss loading screen
                 $(".app").fadeIn(1500); // Fading animation
                 clearTimeout(_this.timeout); // Clear out timeout
-            }, 1500);
+            }, 1000);
         }, function (err) { return console.log(err); });
     };
     App.prototype.ngAfterContentInit = function () {
