@@ -13,14 +13,6 @@ var Timeline = (function () {
     function Timeline() {
     }
     __decorate([
-        core_1.Input("icon"), 
-        __metadata('design:type', String)
-    ], Timeline.prototype, "icon", void 0);
-    __decorate([
-        core_1.Input("title"), 
-        __metadata('design:type', String)
-    ], Timeline.prototype, "title", void 0);
-    __decorate([
         core_1.Input("data"), 
         __metadata('design:type', Array)
     ], Timeline.prototype, "data", void 0);
