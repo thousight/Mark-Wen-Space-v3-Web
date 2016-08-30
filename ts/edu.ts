@@ -7,7 +7,7 @@ import { Timeline } from "./components/timeline";
   template: `
             <div id="Edu" class="Edu content section scrollspy">
               <title [icon]="titleIcon" [title]="titleTitle"></title>
-              <timeline [timelineData]="edu"></timeline>
+              <timeline [data]="edu"></timeline>
             </div>
             `,
   directives: [Title, Timeline]
@@ -16,5 +16,5 @@ import { Timeline } from "./components/timeline";
 export class Edu {
   private titleIcon = "graduation-cap";
   private titleTitle = "Education";
-  @Input("EduData") edu: Array<Object>;
+  @Input("data") edu: Array<Object>;
 }

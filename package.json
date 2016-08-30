@@ -4,7 +4,7 @@
   "description": "Web client of my personal website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "tsc && node server.js",
     "postinstall": "tsc",
     "tsc": "tsc",
     "tsc:w": "tsc -w",

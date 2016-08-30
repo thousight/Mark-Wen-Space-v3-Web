@@ -20,5 +20,5 @@ import "rxjs/add/operator/map";
 })
 
 export class HomeIcons {
-  @Input("links") links: Array<Object>;
+  @Input("data") links: Array<Object>;
 }
