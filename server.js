@@ -5,6 +5,7 @@
 "use strict"
 var express = require('express');
 var compression = require('compression');
+var minify = require('express-minify');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var app = express();
@@ -12,6 +13,8 @@ var app = express();
 app.use(morgan('dev'));
 // Compress everything to speedup
 app.use(compression({threshold: 0}));
+// Minify and cache everything
+app.use(minify());
 // Configure app to use bodyParser(), which will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 // Parse application/json
