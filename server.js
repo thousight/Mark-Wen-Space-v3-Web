@@ -20,11 +20,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Parse application/json
 app.use(bodyParser.json());
 // Adding expiration and cache-control header
-// app.get('/*', (req, res, next) => {
-//   res.setHeader("Cache-Control", "public, max-age=2592000");
-//   res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
-//   next();
-// });
+app.get('/*', (req, res, next) => {
+  res.setHeader("Cache-Control", "public, max-age=2592000");
+  res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
+  next();
+});
 // Get local files
 process.env.PWD = process.cwd();
 app.use(express.static(process.env.PWD + '/'));
