@@ -6,7 +6,7 @@ import { Component, Input } from "@angular/core";
               <div class="Timeline">
                 <div class="grayLine"></div>
                 <div class="timeline-content">
-                  <div *ngFor="let data of data; let odd = odd; let even = even">
+                  <div *ngFor="let data of timelineData; let odd = odd; let even = even">
                     <div class="row" style="margin-bottom: 0px">
                       <div class="col s12 m6 l4" [ngClass]="{ 'offset-l6 offset-m6 timeline-card-right': odd, 'offset-l2': even }">
                         <div class="timeline-pointer">
@@ -47,5 +47,5 @@ import { Component, Input } from "@angular/core";
 export class Timeline {
   @Input("icon") icon: string;
   @Input("title") title: string;
-  @Input("timelineData") data: Array<Object>;
+  @Input("timelineData") timelineData: Array<Object>;
 }
