@@ -4,7 +4,7 @@ import { enableProdMode, provide } from "@angular/core";
 import { GOOGLE_MAPS_PROVIDERS, LazyMapsAPILoaderConfig } from "angular2-google-maps/core/index";
 import { App } from "./app";
 
-enableProdMode();
+// enableProdMode();
 
 bootstrap(App, [HTTP_PROVIDERS, GOOGLE_MAPS_PROVIDERS, provide(LazyMapsAPILoaderConfig, {useFactory: () => {
     let config = new LazyMapsAPILoaderConfig();
