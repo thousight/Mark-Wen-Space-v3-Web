@@ -80,7 +80,6 @@ declare var center: LatLngLiteral;
               </div>
             </div>
             `,
-  directives: [Title, GOOGLE_MAPS_DIRECTIVES],
   providers: [GoogleMapsAPIWrapper]
 })
 

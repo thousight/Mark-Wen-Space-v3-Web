@@ -32,8 +32,7 @@ import { Title } from "./components/title";
                 </div>
               </div>
             </div>
-            `,
-  directives: [NgStyle, Title]
+            `
 })
 
 export class Skills {

@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var title_1 = require("./components/title");
 var Portfolio = (function () {
     function Portfolio() {
         this.titleIcon = "folder-open";
@@ -22,8 +21,7 @@ var Portfolio = (function () {
     Portfolio = __decorate([
         core_1.Component({
             selector: "portfolio",
-            template: "\n            <div id=\"Portfolio\" class=\"Portfolio content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n            </div>\n            ",
-            directives: [title_1.Title]
+            template: "\n            <div id=\"Portfolio\" class=\"Portfolio content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n            </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
     ], Portfolio);

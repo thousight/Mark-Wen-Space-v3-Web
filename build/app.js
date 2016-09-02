@@ -10,16 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var onLoad_1 = require("./components/onLoad");
-var navBar_1 = require("./components/navBar");
-var home_1 = require("./home");
-var about_1 = require("./about");
-var exp_1 = require("./exp");
-var portfolio_1 = require("./portfolio");
-var edu_1 = require("./edu");
-var skills_1 = require("./skills");
-var contact_1 = require("./contact");
-var footer_1 = require("./footer");
 var App = (function () {
     function App(http) {
         this.http = http;
@@ -57,8 +47,7 @@ var App = (function () {
     App = __decorate([
         core_1.Component({
             selector: "app",
-            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home [data]=\"LinksData\"></home>\n              <navBar></navBar>\n              <about></about>\n              <exp [data]=\"ExpData\"></exp>\n              <!-- <portfolio [data]=\"PortfolioData\"></portfolio> -->\n              <edu [data]=\"EduData\"></edu>\n              <skills [data]=\"SkillsData\"></skills>\n              <div class=\"parallax-container\">\n                <div class=\"parallax\"><img src=\"../img/parallax.jpg\"></div>\n                <div class=\"parallax-text\">\n                  \"Love is patient, love is kind. It does not envy, it does not boast, it is not proud.\n                  It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs.\n                  Love does not delight in evil but rejoices with the truth.\n                  It always protects, always trusts, always hopes, always perseveres.\"\n                  <div>-- NIV, 1 Corithians 13: 4~7</div>\n                </div>\n              </div>\n              <contact></contact>\n              <mwFooter></mwFooter>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            ",
-            directives: [onLoad_1.OnLoad, navBar_1.NavBar, home_1.Home, about_1.About, exp_1.Exp, portfolio_1.Portfolio, edu_1.Edu, skills_1.Skills, contact_1.Contact, footer_1.MWFooter]
+            template: "\n            <!-- List all the main components inside div -->\n            <div class=\"app content\" [hidden]=\"hidden\">\n              <home [data]=\"LinksData\"></home>\n              <navBar></navBar>\n              <about></about>\n              <exp [data]=\"ExpData\"></exp>\n              <!-- <portfolio [data]=\"PortfolioData\"></portfolio> -->\n              <edu [data]=\"EduData\"></edu>\n              <skills [data]=\"SkillsData\"></skills>\n              <div class=\"parallax-container\">\n                <div class=\"parallax\"><img src=\"../img/parallax.jpg\"></div>\n                <div class=\"parallax-text\">\n                  \"Love is patient, love is kind. It does not envy, it does not boast, it is not proud.\n                  It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs.\n                  Love does not delight in evil but rejoices with the truth.\n                  It always protects, always trusts, always hopes, always perseveres.\"\n                  <div>-- NIV, 1 Corithians 13: 4~7</div>\n                </div>\n              </div>\n              <contact></contact>\n              <mwFooter></mwFooter>\n            </div>\n\n            <!-- List other components here -->\n            <onLoad [hidden]=\"!hidden\"></onLoad>\n            "
         }), 
         __metadata('design:paramtypes', [http_1.Http])
     ], App);

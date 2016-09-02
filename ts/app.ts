@@ -40,8 +40,7 @@ declare var $: any;
 
             <!-- List other components here -->
             <onLoad [hidden]="!hidden"></onLoad>
-            `,
-  directives: [OnLoad, NavBar, Home, About, Exp, Portfolio, Edu, Skills, Contact, MWFooter]
+            `
 })
 
 export class App {

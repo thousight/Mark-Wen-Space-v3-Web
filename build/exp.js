@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var title_1 = require("./components/title");
-var timeline_1 = require("./components/timeline");
 var Exp = (function () {
     function Exp() {
         this.titleIcon = "briefcase";
@@ -23,8 +21,7 @@ var Exp = (function () {
     Exp = __decorate([
         core_1.Component({
             selector: "exp",
-            template: "\n            <div id=\"Exp\" class=\"Exp content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <timeline [data]=\"exp\"></timeline>\n            </div>\n            ",
-            directives: [title_1.Title, timeline_1.Timeline]
+            template: "\n            <div id=\"Exp\" class=\"Exp content section scrollspy\">\n              <title [icon]=\"titleIcon\" [title]=\"titleTitle\"></title>\n              <timeline [data]=\"exp\"></timeline>\n            </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
     ], Exp);

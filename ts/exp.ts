@@ -9,8 +9,7 @@ import { Timeline } from "./components/timeline";
               <title [icon]="titleIcon" [title]="titleTitle"></title>
               <timeline [data]="exp"></timeline>
             </div>
-            `,
-  directives: [Title, Timeline]
+            `
 })
 
 export class Exp {

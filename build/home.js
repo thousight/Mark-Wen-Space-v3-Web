@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var home_icons_1 = require("./components/home-icons");
 var Home = (function () {
     function Home() {
     }
@@ -20,8 +19,7 @@ var Home = (function () {
     Home = __decorate([
         core_1.Component({
             selector: "home",
-            template: "\n            <div id=\"Home\" class=\"Home content section scrollspy\">\n              <div class=\"home-content-wrapper\">\n                <h1 class=\"home-title no-select\">Mark Wen</h1>\n                <h3 class=\"home-subtitle no-select\">Web and Mobile Developer</h3>\n                <home-icons [data]=\"links\"></home-icons>\n              </div>\n            </div>\n            ",
-            directives: [home_icons_1.HomeIcons]
+            template: "\n            <div id=\"Home\" class=\"Home content section scrollspy\">\n              <div class=\"home-content-wrapper\">\n                <h1 class=\"home-title no-select\">Mark Wen</h1>\n                <h3 class=\"home-subtitle no-select\">Web and Mobile Developer</h3>\n                <home-icons [data]=\"links\"></home-icons>\n              </div>\n            </div>\n            "
         }), 
         __metadata('design:paramtypes', [])
     ], Home);

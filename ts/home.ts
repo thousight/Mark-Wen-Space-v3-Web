@@ -11,8 +11,7 @@ import { HomeIcons } from "./components/home-icons";
                 <home-icons [data]="links"></home-icons>
               </div>
             </div>
-            `,
-  directives: [HomeIcons]
+            `
 })
 
 export class Home {
