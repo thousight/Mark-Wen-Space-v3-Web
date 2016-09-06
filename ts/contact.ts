@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Title } from "./components/title";
-import { GOOGLE_MAPS_DIRECTIVES, GOOGLE_MAPS_PROVIDERS, SebmGoogleMap, SebmGoogleMapMarker, LatLngLiteral, GoogleMapsAPIWrapper } from "angular2-google-maps/core/index";
+import { SebmGoogleMap, SebmGoogleMapMarker, LatLngLiteral, GoogleMapsAPIWrapper } from "angular2-google-maps/core/index";
 declare var center: LatLngLiteral;
 
 @Component({
