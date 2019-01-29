@@ -1,4 +1,7 @@
 # Mark-Wen-Space-v3-Web
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/thousight/Mark-Wen-Space-v3-Web.svg)](https://greenkeeper.io/)
+
 This is the 3rd version of my personal website. The goal of this website is to give employers a better impression and to demonstrate my frontend design ability.
 
 ## Key Features
